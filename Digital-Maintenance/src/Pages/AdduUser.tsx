@@ -107,7 +107,7 @@ function AdduUser() {
           Sign up
         </button>
         
-        
+        {error}
         </div>
 
       
