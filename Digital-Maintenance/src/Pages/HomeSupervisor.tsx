@@ -8,6 +8,8 @@ import NewReport from '../Components/NewReport'
 import Shutdown from '../Components/Shutdown'
 import TechnicianName from '../Components/TechnicianName'
 import axios from 'axios'
+import OperationType from '../Components/OperationType'
+
 
 
 function HomeSupervisor() {
@@ -22,7 +24,6 @@ function HomeSupervisor() {
 
   
 
-    let TechName;
 
     const [active , setActive] = React.useState("")
 
@@ -77,16 +78,23 @@ console.log(user);
                     > Shutdown</button>
 
             </div>
-
-            {/* Components */}
-            {active == "newTask" && <NewTask/>}
             {active == "newReport" && <NewReport/>}
             {active == "shutdown" && <Shutdown/>}
-            
-        </div>
 
-        <div className='flex w-96 flex-col gap-5 h-60 overflow-x-auto'>
-        {
+            <div className='w-2/3 h-11/12'>
+            {active == "newTask" &&  <OperationType/>}
+               
+            </div>
+            <div className='flex w-full'>
+            <div className='w-1/2'>
+            {active == "newTask" && <NewTask/>}
+            </div>
+            <div>
+            {active == "newTask" && 
+            <div className='flex w-96  flex-col gap-5  '>
+                <h1 className='text-center text-2xl '>Chose the Technician</h1>
+                <div className='overflow-x-auto h-5/6'>
+                {
             user.map( (user)=>{
                 if(user.type== "Technician")
                 return(
@@ -99,9 +107,18 @@ console.log(user);
                 
                 })
         }
-        </div>
-        <div>
+                </div>
+      
+        </div>}
+            </div>
+         
+        </div>  
             
+        </div>
+
+        
+        <div>
+
         </div>
             
         </div>
