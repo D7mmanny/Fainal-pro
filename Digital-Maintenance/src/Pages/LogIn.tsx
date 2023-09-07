@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 
 function LogIn() {
-    // const nav = useNavigate()
+    const nav = useNavigate()
 
     type IusersApi = {
         idUser:string,
@@ -17,6 +17,7 @@ function LogIn() {
 
     //state
     const [userInput , setUserInput]=React.useState("")
+    const [error , setError]=React.useState("")
     const [usersApi , setUsersApi]=React.useState<IusersApi[]>([])
 
     // Get Users Api
@@ -36,11 +37,15 @@ function LogIn() {
                    localStorage.setItem("email",item.email)
                    localStorage.setItem("type",item.type)
                    localStorage.setItem("Factory",item.Factory)
-                    console.log(item);
+                   setError("")
 
-                    // (nav("/Home"))
+                   console.log(item);
+
+                    (nav("/HomeSup"))
                 }
             })
+        } else {
+            setError("incorrect input")
         }
     }
   return (
@@ -62,6 +67,7 @@ function LogIn() {
                 onClick={checkId}>
                     Log in
                 </button>
+                {error}
             </div>
             <div className=' w-3/5'> 
                 <img src={LogInImg}/>
