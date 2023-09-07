@@ -5,8 +5,8 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 
 function LogIn() {
-    const nav = useNavigate()
-    
+    // const nav = useNavigate()
+
     type IusersApi = {
         idUser:string,
         username:string,
