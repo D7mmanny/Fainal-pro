@@ -1,6 +1,9 @@
-
+import {Routes, Route} from "react-router-dom";
 import './App.css'
+
+//pages
 import AdduUser from './Pages/AdduUser'
+import LogIn from "./Pages/LogIn";
 
 
 function App() {
@@ -8,7 +11,12 @@ function App() {
 
   return (
     <>
-    <AdduUser/>
+    <Routes>
+      <Route path="addUser" element={ <AdduUser/>} />
+      <Route path="/" element={ <LogIn/>} />
+
+    </Routes>
+   
    
     </>
   )
