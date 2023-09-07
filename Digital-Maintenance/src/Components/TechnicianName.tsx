@@ -4,6 +4,7 @@ interface TechnicianName{
     name: string
 }
 function TechnicianName(props:TechnicianName) {
+  
   return (
     <div>
         <div className="w-80">
