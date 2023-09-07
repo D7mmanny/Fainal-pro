@@ -34,7 +34,7 @@ function NewReport() {
         <div className=" bg-myGray border w-6/6 h-4/5 flex flex-col items-center gap-5 rounded-xl pb-6">
           <input
             value={`${factory} Factory`}
-            className="text-center py-1 px-3 rounded-xl mt-7 text-gray-700"
+            className="text-center py-1 px-8 rounded-xl mt-7 text-gray-700"
           />
           <textarea
             className=" w-5/6 h-96 px-4"

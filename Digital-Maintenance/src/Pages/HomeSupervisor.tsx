@@ -1,7 +1,10 @@
 import React from 'react'
+
+//components
 import Nav from '../Components/Nav'
 import NewTask from '../Components/NewTask'
 import NewReport from '../Components/NewReport'
+import Shutdown from '../Components/shutdown'
 
 
 function HomeSupervisor() {
@@ -45,6 +48,7 @@ function HomeSupervisor() {
             {/* Components */}
             {active == "newTask" && <NewTask/>}
             {active == "newReport" && <NewReport/>}
+            {active == "shutdown" && <Shutdown/>}
             
         </div>
 
