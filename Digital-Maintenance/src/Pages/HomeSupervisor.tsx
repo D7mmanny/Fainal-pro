@@ -1,11 +1,12 @@
 import React from 'react'
+import Nav from '../Components/Nav'
 
 function HomeSupervisor() {
   return (
     <div >
         {/* Nave */}
         <div>
-
+        <Nav/>
         </div>
         
         {/* Supervisor Panel */}
