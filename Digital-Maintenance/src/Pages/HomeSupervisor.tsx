@@ -85,7 +85,7 @@ console.log(user);
             
         </div>
 
-        <div>
+        <div className='flex w-96 flex-col gap-5 h-60 overflow-x-auto'>
         {
             user.map( (user)=>{
                 if(user.type== "Technician")
@@ -99,6 +99,9 @@ console.log(user);
                 
                 })
         }
+        </div>
+        <div>
+            
         </div>
             
         </div>
