@@ -42,10 +42,12 @@ function HomeSupervisor() {
 
         <div className='w-7/12 '>
 
-        {/* <NewTask/> */}
-        <NewReport/>
         </div>
-           
+
+        <div>
+
+        </div>
+            
         </div>
 
       
