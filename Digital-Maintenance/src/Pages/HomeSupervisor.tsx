@@ -17,7 +17,7 @@ function HomeSupervisor() {
         
         {/* Supervisor Panel */}
         <div className='flex flex-col items-center gap-10 '>
-        <h1 className='w-7/12 text-2xl'>Supervisor Panel</h1>
+        <h1 className='w-7/12 text-2xl mt-14'>Supervisor Panel</h1>
         <div className='w-8/12 h-full pb-20 shadow-2xl flex flex-col gap-9 justify-center items-center'>
             <div className='flex gap-32 text-light-blue mt-8'>  
                     <button 
