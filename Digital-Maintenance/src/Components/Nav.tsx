@@ -28,7 +28,7 @@ function Nav() {
               LogOut
             </a>
             {name}
-            <img className="w-12 py-3 mr-5" src={User} />
+            <a className=" cursor-pointer"><img className="w-12 py-3 mr-5" src={User} /></a>
           </div>
         </nav>
       )}
@@ -43,7 +43,7 @@ function Nav() {
               LogOut
             </a>
             {name}
-            <img className="w-12 py-3 mr-5" src={User} />
+            <a className=" cursor-pointer"><img className="w-12 py-3 mr-5" src={User} /></a>
           </div>
         </nav>
       )}
@@ -57,7 +57,7 @@ function Nav() {
               LogOut
             </a>
             {name}
-            <img className="w-12 py-3 mr-5" src={User} />
+            <a className=" cursor-pointer"><img className="w-12 py-3 mr-5" src={User} /></a>
           </div>
         </nav>
       )}
