@@ -8,6 +8,7 @@ function OperationType() {
 
   //sendInspection
   const sendInspection = () => {
+    
     //post
     //alert
   };
