@@ -1,15 +1,48 @@
 import React from 'react'
 
 //components
+// import React from 'react'
 import Nav from '../Components/Nav'
 import NewTask from '../Components/NewTask'
 import NewReport from '../Components/NewReport'
 import Shutdown from '../Components/shutdown'
+import TechnicianName from '../Components/TechnicianName'
+import axios from 'axios'
 
 
 function HomeSupervisor() {
+    type ApiUser={
+        id:string,
+        username:string,
+        email:string,
+        idUser:string,
+        type:string,
+        Factory:string,
+    }
+
+  
+
+    let TechName;
 
     const [active , setActive] = React.useState("")
+
+const[user,setUser]=React.useState<ApiUser[]>([])
+
+React.useEffect(() => {
+    axios.get("https://64f8e5cc824680fd21802e48.mockapi.io/Users")
+    .then((res) => {
+        setUser(res.data)
+    })
+},[])
+
+console.log(user);
+
+
+ 
+
+
+
+
     
   return (
     <div >
@@ -52,6 +85,21 @@ function HomeSupervisor() {
             
         </div>
 
+        <div>
+        {
+            user.map( (user)=>{
+                if(user.type== "Technician")
+                return(
+                    <>
+                        <TechnicianName name={user.username}/>
+                    </>
+                )
+                    
+                
+                
+                })
+        }
+        </div>
             
         </div>
 
