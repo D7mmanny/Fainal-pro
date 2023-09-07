@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {},
     colors:{
-      button:'#E8EEEF',
+        'light-blue': '#176B87',
+        'dark-blue': '#053B50',
+        'myGray': '#E8EEEF'
     },
   },
   plugins: [],
