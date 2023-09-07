@@ -17,7 +17,7 @@ function NewTask() {
             <a className='bg-light-blue w-2/12 text-white rounded-xl flex justify-center items-center' >Lab G5</a>
             <a className='bg-light-blue w-2/12 text-white rounded-xl flex justify-center items-center' >Lab T3</a>
             <a className='bg-light-blue w-2/12 text-white rounded-xl flex justify-center items-center' >Lab W4</a>
-            <input type="text"  value={}/>
+           
             </ul>
           </div>
         </div>
