@@ -34,6 +34,10 @@ function HomeSupervisor() {
         <div className='w-7/12 '>
         <NewTask/>
         </div>
+
+        <div>
+
+        </div>
             
         </div>
 
