@@ -1,6 +1,7 @@
 import React from 'react'
 import Nav from '../Components/Nav'
 
+
 function HomeSupervisor() {
   return (
     <div >
@@ -27,12 +28,12 @@ function HomeSupervisor() {
                 </div>
 
             </div>
+             
         </div>
             
         </div>
-      
 
-       
+      
 
     </div>
   )
