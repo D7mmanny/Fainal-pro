@@ -2,22 +2,78 @@ import React from "react";
 import Inspection from "./Inspection";
 import NewTask from "./NewTask";
 import Maintanance from "./Maintanance";
+import axios from "axios";
 
 function OperationType() {
   const [active, setActive] = React.useState("");
+  const [error,setErorr]=React.useState("")
+  
 
   //sendInspection
-  const sendInspection = () => {
+  const sendInspection = (e) => {
     
-    //post
-    //alert
+    e.preventDefault();
+    const data ={
+      Technician: localStorage.getItem("technicianName"),
+      Lab:localStorage.getItem("Lab") ,
+      Equipment: "",
+      MaintenanceType: "",
+      OperationType:"Inspection",
+      report:"",
+      EquipmentStatus:"",
+      dateOfCompletion:"",
+      NextOperation:"",
+      OperationStatus:"",
+      supervisor:localStorage.getItem("username"),
+      Factory:localStorage.getItem("Factory")
+
+
+    }
+    if(data.Technician==""||data.Lab=="")
+    {setErorr("There is something empty")}
+    else{
+      axios.post(`https://64f8e3b3824680fd21802caf.mockapi.io/Task`,data)
+      .then(res=>{
+          console.log(res);
+      });
+     
+      setErorr("")
+    }
+    console.log(error);
   };
 
   //sendMaintanance
-  const sendMaintanance = () =>{
-    //post
-    //alert
-  }
+  const sendMaintanance = (e) => {
+    
+    e.preventDefault();
+    const data ={
+      Technician: localStorage.getItem("technicianName"),
+      Lab:localStorage.getItem("Lab") ,
+      Equipment: localStorage.getItem("Equipment"),
+      MaintenanceType: localStorage.getItem("MaintenanceType"),
+      OperationType:"Inspection",
+      report:"",
+      EquipmentStatus:"",
+      dateOfCompletion:"",
+      NextOperation:"",
+      OperationStatus:"",
+      supervisor:localStorage.getItem("username"),
+      Factory:localStorage.getItem("Factory")
+
+
+    }
+    if(data.Technician==""||data.Lab=="" ||data.Equipment=="" ||data.MaintenanceType=="")
+    {setErorr("There is something empty")}
+    else{
+      axios.post(`https://64f8e3b3824680fd21802caf.mockapi.io/Task`,data)
+      .then(res=>{
+          console.log(res);
+      });
+     
+      setErorr("")
+    }
+    console.log(error);
+  };
   return (
     <div>
       <div className="flex h-14 text-xl ">
