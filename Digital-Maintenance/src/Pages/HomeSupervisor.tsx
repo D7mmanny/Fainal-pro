@@ -1,10 +1,39 @@
+import { useState,useEffect } from 'react'
+import axios from 'axios'
 // import React from 'react'
 import Nav from '../Components/Nav'
 // import NewTask from '../Components/NewTask'
 import NewReport from '../Components/NewReport'
+import TechnicianName from '../Components/TechnicianName'
+
 
 
 function HomeSupervisor() {
+let technicianName;
+const[user,setUser]=useState({
+    id:"",
+    username:"",
+    email:"",
+    idUser:"",
+    type:"",
+    Factory:"",
+})
+
+useEffect(() => {
+    axios.get("https://64f8e5cc824680fd21802e48.mockapi.io/Users")
+    .then((res) => {
+        setUser(res.data)
+    })
+},[])
+
+console.log(user);
+
+
+ 
+
+
+
+
     
   return (
     <div >
@@ -45,7 +74,7 @@ function HomeSupervisor() {
         </div>
 
         <div>
-
+       
         </div>
             
         </div>
