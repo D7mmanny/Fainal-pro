@@ -6,7 +6,7 @@ function Maintanance() {
       <div className="flex gap-5">
         {/* Equipment */}
         <div className="relative w-full lg:max-w-sm">
-          <h1 className=" text-light-blue text-center pb-2 ">
+          <h1 className=" text-light-blue text-center pb-2">
             Chose the Equipment
           </h1>
           <select className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none focus:border-light-blue">

@@ -24,10 +24,10 @@ console.log(user);
 
   return (
     <div>
-        <div className="">
+        <div>
         </div>
-          <div className="flex w-96  flex-col gap-5  ">
-            <h1 className="text-center text-2xl ">Chose the Technician</h1>
+          <div className="flex w-96 flex-col gap-5  ">
+            <h1 className="text-center text-xl ">Chose the Technician</h1>
             <div className=" overflow-x-auto h-72 flex flex-col items-center ">
               {user.map((user) => {
                 if (user.type == "Technician")

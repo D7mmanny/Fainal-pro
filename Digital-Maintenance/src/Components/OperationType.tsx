@@ -40,7 +40,7 @@ function OperationType() {
 
       {active == "Inspection" && (
         <div className="flex flex-col justify-center items-center gap-8">
-          <div className="flex justify-center items-center gap-7 mt-8">
+          <div className="flex justify-center items-center gap-7 ">
             <Inspection />
             <NewTask />
           </div>

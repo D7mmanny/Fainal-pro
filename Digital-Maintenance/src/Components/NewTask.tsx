@@ -5,7 +5,7 @@ function NewTask() {
         
 
         
-          <h1 className='text-center text-2xl '>Chose the Lab</h1>
+          <h1 className='text-center text-xl pb-3 '>Chose the Lab</h1>
 
           <div className='flex justify-center '>
             <select className='w-80 pt-3 ' name="" id="" size={5}>
