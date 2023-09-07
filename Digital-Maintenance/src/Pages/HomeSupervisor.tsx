@@ -1,7 +1,11 @@
+import React from 'react'
+
+//components
 // import React from 'react'
 import Nav from '../Components/Nav'
 import NewTask from '../Components/NewTask'
 import NewReport from '../Components/NewReport'
+import Shutdown from '../Components/shutdown'
 import TechnicianName from '../Components/TechnicianName'
 
 
@@ -72,6 +76,7 @@ console.log(user);
             {/* Components */}
             {active == "newTask" && <NewTask/>}
             {active == "newReport" && <NewReport/>}
+            {active == "shutdown" && <Shutdown/>}
             
         </div>
 
