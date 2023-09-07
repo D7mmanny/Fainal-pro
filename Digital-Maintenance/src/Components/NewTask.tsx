@@ -10,11 +10,11 @@ const [Lab,setLab]=useState({
   const handleInput = (e) => {
     e.persist();
     setLab({ ...Lab, [e.target.name]: e.target.value });
-    
+   
    
     
   };
-  
+  localStorage.setItem("Lab",Lab.lab)
   
   return (
     <div>

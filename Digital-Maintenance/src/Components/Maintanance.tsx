@@ -12,10 +12,9 @@ function Maintanance() {
     const handleInput = (e) => {
       e.persist();
       setMaintanance({ ...Maintanance, [e.target.name]: e.target.value });
-      
-     
-      
     };
+    localStorage.setItem("Equipment",Maintanance.Equipment)
+    localStorage.setItem("MaintenanceType",Maintanance.MaintenanceType)
   return (
     <div>
       <div className="flex gap-5">
