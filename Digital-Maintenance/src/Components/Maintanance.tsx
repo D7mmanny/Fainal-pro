@@ -1,6 +1,20 @@
+import { useState } from "react";
+
 // import React from "react";
 
+
 function Maintanance() {
+  const [Maintanance,setMaintanance]=useState({
+    Equipment:"",
+    MaintenanceType:""
+  })
+  
+    const handleInput = (e) => {
+      e.persist();
+      setMaintanance({ ...Maintanance, [e.target.name]: e.target.value });
+    };
+    localStorage.setItem("Equipment",Maintanance.Equipment)
+    localStorage.setItem("MaintenanceType",Maintanance.MaintenanceType)
   return (
     <div>
       <div className="flex gap-5">
@@ -9,7 +23,7 @@ function Maintanance() {
           <h1 className=" text-light-blue text-center pb-2">
             Chose the Equipment
           </h1>
-          <select className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none focus:border-light-blue">
+          <select name="Equipment" onChange={handleInput} className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none focus:border-light-blue">
             <option value="Pump">Pump</option>
             <option value="Compressor">Compressor</option>
             <option value="Electrical motor">Electrical motor</option>
@@ -37,7 +51,7 @@ function Maintanance() {
           <h1 className=" text-light-blue text-center pb-2 ">
             Chose the Maintenance Type
           </h1>
-          <select className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none focus:border-light-blue">
+          <select name="MaintenanceType" onChange={handleInput} className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none focus:border-light-blue">
             <option value="Regular Preventative Maintenance">
               Regular Preventative Maintenance
             </option>

@@ -1,5 +1,21 @@
+import { useState } from "react";
+
 
 function NewTask() {
+
+const [Lab,setLab]=useState({
+  lab:""
+})
+
+  const handleInput = (e) => {
+    e.persist();
+    setLab({ ...Lab, [e.target.name]: e.target.value });
+   
+   
+    
+  };
+  localStorage.setItem("Lab",Lab.lab)
+  
   return (
     <div>
         
@@ -8,7 +24,7 @@ function NewTask() {
           <h1 className='text-center text-xl pb-3 '>Chose the Lab</h1>
 
           <div className='flex justify-center '>
-            <select className='w-80 pt-3 ' name="" id="" size={5}>
+            <select className='w-80 pt-3 ' name="lab" id="" size={5} onChange={handleInput}>
               <option className='bg-light-blue  h-14 text-white rounded-xl flex justify-center items-center m-2' value="Lab A2">Lab A2</option>
               <option className='bg-light-blue  h-14 text-white rounded-xl flex justify-center items-center m-2' value="Lab S8">Lab S8</option>
               <option className='bg-light-blue  h-14 text-white rounded-xl flex justify-center items-center m-2' value="Lab G5">Lab G5</option>
