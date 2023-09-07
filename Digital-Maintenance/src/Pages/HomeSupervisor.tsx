@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from '../Components/Nav'
+import NewTask from '../Components/NewTask'
 
 function HomeSupervisor() {
   return (
@@ -27,6 +28,9 @@ function HomeSupervisor() {
                 </div>
 
             </div>
+        </div>
+        <div className='w-7/12 '>
+        <NewTask/>
         </div>
             
         </div>
