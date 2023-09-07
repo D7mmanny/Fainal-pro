@@ -3,45 +3,21 @@ import React from 'react'
 //components
 // import React from 'react'
 import Nav from '../Components/Nav'
-import NewTask from '../Components/NewTask'
+// import NewTask from '../Components/NewTask'
 import NewReport from '../Components/NewReport'
 import Shutdown from '../Components/Shutdown'
-import TechnicianName from '../Components/TechnicianName'
-import axios from 'axios'
+
 import OperationType from '../Components/OperationType'
 
 
 
 function HomeSupervisor() {
-    type ApiUser={
-        id:string,
-        username:string,
-        email:string,
-        idUser:string,
-        type:string,
-        Factory:string,
-    }
+  
 
   
 
 
-    const [active , setActive] = React.useState("")
-
-const[user,setUser]=React.useState<ApiUser[]>([])
-
-React.useEffect(() => {
-    axios.get("https://64f8e5cc824680fd21802e48.mockapi.io/Users")
-    .then((res) => {
-        setUser(res.data)
-    })
-},[])
-
-console.log(user);
-
-
- 
-
-
+const [active , setActive] = React.useState("")
 
 
     
@@ -82,37 +58,10 @@ console.log(user);
             {active == "shutdown" && <Shutdown/>}
 
             <div className='w-2/3 h-11/12'>
-            {active == "newTask" &&  <OperationType/>}
-               
+            {active == "newTask" &&  <OperationType/>}  
             </div>
-            <div className='flex w-full'>
-            <div className='w-1/2'>
-            {active == "newTask" && <NewTask/>}
-            </div>
-            <div>
-            {active == "newTask" && 
-            <div className='flex w-96  flex-col gap-5  '>
-                <h1 className='text-center text-2xl '>Chose the Technician</h1>
-                <div className='overflow-x-auto h-5/6'>
-                {
-            user.map( (user)=>{
-                if(user.type== "Technician")
-                return(
-                    <>
-                        <TechnicianName name={user.username}/>
-                    </>
-                )
-                    
-                
-                
-                })
-        }
-                </div>
-      
-        </div>}
-            </div>
-         
-        </div>  
+
+            
             
         </div>
 
