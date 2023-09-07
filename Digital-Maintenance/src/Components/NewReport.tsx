@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function NewReport() {
 
@@ -12,6 +14,8 @@ function NewReport() {
 
   //post report
   const submitReport = () => {
+     
+    //post
     axios
       .post("https://64f8e5cc824680fd21802e48.mockapi.io/FactoryReport", {
         supervisorName: name,
@@ -21,8 +25,22 @@ function NewReport() {
       })
       .then((response) => {
         console.log(response);
-        window.location.reload()
+        setReport("")
+        //alert
+       toast.success('The report has been sent successfully', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
       });
+     
+      
+     
     
 
   };
@@ -36,6 +54,7 @@ function NewReport() {
         <textarea
           className=" w-5/6 h-96 px-4"
           placeholder="Write the report here..."
+          value={report}
           onChange={(e) => setReport(e.target.value)}
         />
         <button
@@ -45,6 +64,7 @@ function NewReport() {
           Submit
         </button>
       </div>
+       <ToastContainer />
     </div>
   );
 }

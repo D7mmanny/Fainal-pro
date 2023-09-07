@@ -5,7 +5,7 @@ import React from 'react'
 import Nav from '../Components/Nav'
 import NewTask from '../Components/NewTask'
 import NewReport from '../Components/NewReport'
-import Shutdown from '../Components/shutdown'
+import Shutdown from '../Components/Shutdown'
 import TechnicianName from '../Components/TechnicianName'
 import axios from 'axios'
 
