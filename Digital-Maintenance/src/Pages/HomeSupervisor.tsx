@@ -1,14 +1,14 @@
-import { useState,useEffect } from 'react'
-import axios from 'axios'
 // import React from 'react'
 import Nav from '../Components/Nav'
-// import NewTask from '../Components/NewTask'
+import NewTask from '../Components/NewTask'
 import NewReport from '../Components/NewReport'
 import TechnicianName from '../Components/TechnicianName'
 
 
 
 function HomeSupervisor() {
+
+    const [active , setActive] = React.useState("")
 let technicianName;
 const[user,setUser]=useState({
     id:"",
@@ -44,37 +44,39 @@ console.log(user);
         
         {/* Supervisor Panel */}
         <div className='flex flex-col items-center gap-10 '>
-        <h1 className='w-7/12 text-2xl'>Supervisor Panel</h1>
-        <div className='w-8/12  h-96 shadow-2xl flex justify-center'>
-            <div className='w-6/12 flex justify-evenly text-xl text-light-blue justify-items-center'>  
-                <div className='w-3/12 h-fit'>
+        <h1 className='w-7/12 text-2xl mt-14'>Supervisor Panel</h1>
+        <div className='w-8/12 h-full pb-20 shadow-2xl flex flex-col gap-9 justify-center items-center'>
+            <div className='flex gap-32 text-light-blue mt-8'>  
                     <button 
-                    className='w-full h-14 rounded-full shadow-lg bg-myGray'
-                    >new task +</button>
+                    className='py-3 px-12 rounded-full shadow-lg bg-myGray hover:bg-gray-200'
+                    onClick={()=>{setActive("newTask")}}>
+                        new task +
+                    </button>
                     
-                </div>
+             
                 
-                <div className='w-3/12 h-fit'>
                     <button 
-                    className=' w-full h-14 rounded-full shadow-lg bg-myGray'
+                    className='py-3 px-12 rounded-full shadow-lg bg-myGray hover:bg-gray-200'
+                    onClick={()=>{setActive("newReport")}}
                     >new report +</button>
-                </div>
+            
 
-                <div className='w-3/12 h-fit'>
-                    <button className='w-full h-14 rounded-full shadow-lg bg-myGray'
+                
+                    <button 
+                    className='py-3 px-12 rounded-full shadow-lg bg-myGray hover:bg-gray-200'
+                     onClick={()=>{setActive("shutdown")}}
                     > Shutdown</button>
-                </div>
 
             </div>
-             
-        </div>
 
-        <div className='w-7/12 '>
-
+            {/* Components */}
+            {active == "newTask" && <NewTask/>}
+            {active == "newReport" && <NewReport/>}
+            
         </div>
 
         <div>
-       
+
         </div>
             
         </div>
