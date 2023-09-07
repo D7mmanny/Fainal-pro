@@ -33,7 +33,9 @@ console.log(user);
                 if (user.type == "Technician")
                   return (
                     <>
-                      <TechnicianName name ={user.username} />
+                    <a onClick={()=>{localStorage.setItem("technicianName" , user.username)}}>
+                    <TechnicianName name ={user.username}/>
+                    </a>
                     </>
                   );
               })}
