@@ -4,6 +4,7 @@ import axios from "axios";
 
 function Tasks() {
   type task = {
+    id:string,
     OperationType: string;
     Equipment: string;
     MaintenanceType: string;
@@ -30,8 +31,10 @@ function Tasks() {
           <a
             className="  cursor-pointer"
             onClick={() => {
-              localStorage.setItem("taskDetails", taskDetails);
-              setTaskDetails(task.OperationType);
+              setTaskDetails(task.OperationType)
+              localStorage.setItem("taskDetails", task.OperationType);
+              localStorage.setItem("taskId",task.id)
+              localStorage.setItem("taskLab",task.Lab)
             }}
           >
             <TaskProps
