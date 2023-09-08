@@ -1,6 +1,8 @@
 import React from "react";
 import TaskProps from "./TaskProps";
 import axios from "axios";
+import TechnicianInspection from '../Components/TechnicianInspection'
+
 
 function Tasks() {
   type task = {
@@ -48,8 +50,11 @@ function Tasks() {
         ))}
       </div>
 
-      {taskDetails == "Inspection" && <h1>Inspection</h1>}
-      {taskDetails == "Maintanance" && <h1>Maintanance</h1>}
+      <div>
+        {taskDetails == "Inspection" && <TechnicianInspection/>}
+        {taskDetails == "Maintanance" && <h1>Maintanance</h1>}
+      </div>
+     
     </div>
   );
 }
