@@ -34,6 +34,7 @@ function LogIn() {
             usersApi.map((item) => {
                 if(item.idUser == userInput ){
                    localStorage.setItem("username",item.username)
+                   localStorage.setItem("id",item.idUser)
                    localStorage.setItem("email",item.email)
                    localStorage.setItem("type",item.type)
                    localStorage.setItem("Factory",item.Factory)
