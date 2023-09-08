@@ -2,6 +2,7 @@ import React from "react";
 import TaskProps from "./TaskProps";
 import axios from "axios";
 import TechnicianInspection from '../Components/TechnicianInspection'
+import TechnicianMaintuinance from "./TechnicianMaintuinance";
 
 
 function Tasks() {
@@ -38,6 +39,8 @@ function Tasks() {
               localStorage.setItem("taskDetails", task.OperationType);
               localStorage.setItem("taskId",task.id)
               localStorage.setItem("taskLab",task.Lab)
+              localStorage.setItem("Equipment",task.Equipment)
+              localStorage.setItem("MaintenanceType",task.MaintenanceType)
             }}
           >
             <TaskProps
@@ -53,7 +56,7 @@ function Tasks() {
       </div>
       <div className="w-full">
         {taskDetails == "Inspection" && <TechnicianInspection/>}
-        {taskDetails == "Maintanance" && <h1>Maintanance</h1>}
+        {taskDetails == "Maintanance" && <TechnicianMaintuinance/>}
       </div>
      
     </div>
