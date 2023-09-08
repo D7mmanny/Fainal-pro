@@ -1,13 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Info from "../Components/Info";
 //assets
 import WhiteLogo from "../assets/WhiteLogo.svg";
 import WhiteLogo2 from "../assets/WhiteLogo2.svg";
 import Direct from "../assets/direct.svg";
+import User from "../assets/user.svg"
 
 function Dashboard() {
-    const nav = useNavigate();
+  const [active, setActive] = React.useState("Info");
+  const nav = useNavigate();
   const type = localStorage.getItem("type");
+  const name = localStorage.getItem("username"); 
+
+  const logOut = () => {
+    localStorage.clear();
+    nav("/");
+  };
   return (
     <div>
       {/* Nav */}
@@ -89,6 +98,27 @@ function Dashboard() {
           </div>
         </nav>
       )}
+
+      {/* content */}
+      <div className="flex">
+        <div className="w-1/4 flex flex-col items-center bg-dark-blue h-screen gap-80">
+          <div className="flex flex-col items-center">
+          <img className="pt-12" src={User} />
+          <h1 className="text-xl text-white mt-5"> {name}</h1>
+          <hr className="border border-gray-400 w-full mt-8 border-spacing-0.5" />
+          <a  onClick={() => {
+                  setActive("Info");
+                }} className=" hover:bg-cyan-950 cursor-pointer text-center"><h1 className="text-lg text-white py-4 px-20 mx-1"> personal information</h1></a>
+          </div>
+
+          <a onClick={logOut} className=" hover:bg-cyan-950 cursor-pointer text-center"><h1 className="text-lg text-white py-4 px-32 mx-1"> Log out</h1></a>
+          
+        </div>
+        <div className="w-3/4 border flex justify-center items-center">
+          {active == "Info" && <Info/>}
+        </div>
+        
+      </div>
     </div>
   );
 }
