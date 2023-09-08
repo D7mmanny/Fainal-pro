@@ -1,4 +1,3 @@
-// import React from "react";
 import { useNavigate } from "react-router-dom";
 
 //assets
@@ -28,7 +27,7 @@ function Nav() {
               LogOut
             </a>
             {name}
-            <a className=" cursor-pointer"><img className="w-12 py-3 mr-5" src={User} /></a>
+            <a href="/Dashboard" className=" cursor-pointer"><img className="w-12 py-3 mr-5" src={User} /></a>
           </div>
         </nav>
       )}
@@ -43,7 +42,7 @@ function Nav() {
               LogOut
             </a>
             {name}
-            <a className=" cursor-pointer"><img className="w-12 py-3 mr-5" src={User} /></a>
+            <a href="/Dashboard"  className=" cursor-pointer"><img className="w-12 py-3 mr-5" src={User} /></a>
           </div>
         </nav>
       )}
@@ -57,10 +56,12 @@ function Nav() {
               LogOut
             </a>
             {name}
-            <a className=" cursor-pointer"><img className="w-12 py-3 mr-5" src={User} /></a>
+            <a href="/Dashboard"  className=" cursor-pointer"><img className="w-12 py-3 mr-5" src={User} /></a>
           </div>
         </nav>
       )}
+      
+      
     </div>
   );
 }
