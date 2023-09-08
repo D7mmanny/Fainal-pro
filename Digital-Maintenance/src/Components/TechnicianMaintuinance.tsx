@@ -13,6 +13,7 @@ function TechnicianMaintuinance() {
         dayDate:"",
         NextDate:"",
         EquipmentStatus:"",
+        OperationStatus:""
     })
 
     const handleInput = (e) => {
@@ -28,7 +29,8 @@ function TechnicianMaintuinance() {
                 report:report.report,
                 dateOfCompletion:report.dayDate,
                 NextOperation:report.NextDate,
-                EquipmentStatus:report.EquipmentStatus
+                EquipmentStatus:report.EquipmentStatus,
+                OperationStatus:"Complete",
             })
         }
 

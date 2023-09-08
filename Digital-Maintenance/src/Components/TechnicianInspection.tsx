@@ -11,6 +11,7 @@ function TechnicianInspection() {
         report:"",
         dayDate:"",
         NextDate:"",
+        OperationStatus:""
     })
 
     const handleInput = (e) => {
@@ -25,7 +26,8 @@ function TechnicianInspection() {
             axios.put(`https://64f8e3b3824680fd21802caf.mockapi.io/Task/${taskid}`,{
                 report:report.report,
                 dateOfCompletion:report.dayDate,
-                NextOperation:report.NextDate
+                NextOperation:report.NextDate,
+                OperationStatus:"Complete"
             })
         }
 

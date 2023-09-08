@@ -10,7 +10,7 @@ import HomeSupervisor from './Pages/HomeSupervisor'
 import HomeTechnican from './Pages/HomeTechnican'
 import HomeManager from './Pages/HomeManager'
 import Dashboard from './Pages/Dashboard'
-
+import TechnicianReport from './Pages/TechnicianReport'
 function App() {
 
 
@@ -22,6 +22,7 @@ function App() {
       <Route path='/HomeTech' element={<HomeTechnican/>}/>
       <Route path='/HomeManager' element={<HomeManager/>}/>
       <Route path='/Dashboard' element={<Dashboard/>}/>
+      <Route path='/TechnicianReport' element={<TechnicianReport/>}/>
       <Route path="/" element={ <LogIn/>} />
     </Routes>
     </>
