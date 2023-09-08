@@ -3,74 +3,99 @@ import Inspection from "./Inspection";
 import NewTask from "./NewTask";
 import Maintanance from "./Maintanance";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function OperationType() {
   const [active, setActive] = React.useState("");
-  const [error,setErorr]=React.useState("")
-  
+  const [error, setErorr] = React.useState("");
 
   //sendInspection
   const sendInspection = (e) => {
-    
     e.preventDefault();
-    const data ={
+    const data = {
       Technician: localStorage.getItem("technicianName"),
-      Lab:localStorage.getItem("Lab") ,
+      Lab: localStorage.getItem("Lab"),
       Equipment: "",
       MaintenanceType: "",
-      OperationType:"Inspection",
-      report:"",
-      EquipmentStatus:"",
-      dateOfCompletion:"",
-      NextOperation:"",
-      OperationStatus:"",
-      supervisor:localStorage.getItem("username"),
-      Factory:localStorage.getItem("Factory")
-
-
-    }
-    if(data.Technician==""||data.Lab=="")
-    {setErorr("There is something empty")}
-    else{
-      axios.post(`https://64f8e3b3824680fd21802caf.mockapi.io/Task`,data)
-      .then(res=>{
+      OperationType: "Inspection",
+      report: "",
+      EquipmentStatus: "",
+      dateOfCompletion: "",
+      NextOperation: "",
+      OperationStatus: "",
+      supervisor: localStorage.getItem("username"),
+      Factory: localStorage.getItem("Factory"),
+    };
+    if (data.Technician == "" || data.Lab == "") {
+      setErorr("There is something empty");
+    } else {
+      axios
+        .post(`https://64f8e3b3824680fd21802caf.mockapi.io/Task`, data)
+        .then((res) => {
           console.log(res);
-      });
-     
-      setErorr("")
+          //alert
+          toast.success("The task has been sent successfully", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        });
+
+      setErorr("");
     }
     console.log(error);
   };
 
   //sendMaintanance
   const sendMaintanance = (e) => {
-    
     e.preventDefault();
-    const data ={
+    const data = {
       Technician: localStorage.getItem("technicianName"),
-      Lab:localStorage.getItem("Lab") ,
+      Lab: localStorage.getItem("Lab"),
       Equipment: localStorage.getItem("Equipment"),
       MaintenanceType: localStorage.getItem("MaintenanceType"),
-      OperationType:"Inspection",
-      report:"",
-      EquipmentStatus:"",
-      dateOfCompletion:"",
-      NextOperation:"",
-      OperationStatus:"",
-      supervisor:localStorage.getItem("username"),
-      Factory:localStorage.getItem("Factory")
-
-
-    }
-    if(data.Technician==""||data.Lab=="" ||data.Equipment=="" ||data.MaintenanceType=="")
-    {setErorr("There is something empty")}
-    else{
-      axios.post(`https://64f8e3b3824680fd21802caf.mockapi.io/Task`,data)
-      .then(res=>{
+      OperationType: "Inspection",
+      report: "",
+      EquipmentStatus: "",
+      dateOfCompletion: "",
+      NextOperation: "",
+      OperationStatus: "",
+      supervisor: localStorage.getItem("username"),
+      Factory: localStorage.getItem("Factory"),
+    };
+    if (
+      data.Technician == "" ||
+      data.Lab == "" ||
+      data.Equipment == "" ||
+      data.MaintenanceType == ""
+    ) {
+      setErorr("There is something empty");
+    } else {
+      axios
+        .post(`https://64f8e3b3824680fd21802caf.mockapi.io/Task`, data)
+        .then((res) => {
           console.log(res);
-      });
-     
-      setErorr("")
+           //alert
+           toast.success("The task has been sent successfully", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          })
+
+        });
+
+      setErorr("");
     }
     console.log(error);
   };
@@ -97,7 +122,7 @@ function OperationType() {
 
       {active == "Inspection" && (
         <div className="flex flex-col justify-center items-center gap-8">
-          <div className="flex justify-center items-center gap-7 mt-8">
+          <div className="flex justify-center items-center gap-10 mt-8">
             <Inspection />
             <NewTask />
           </div>
@@ -112,11 +137,11 @@ function OperationType() {
 
       {active == "Maintenance" && (
         <div className="flex flex-col justify-center items-center gap-8">
-          <div className="flex justify-center items-center gap-7 mt-8">
+          <div className="flex justify-center items-center gap-10 mt-8">
             <Inspection />
             <NewTask />
           </div>
-          <Maintanance/>
+          <Maintanance />
           <button
             className=" bg-light-blue py-2 px-9 rounded-xl text-white hover:bg-sky-600"
             onClick={sendMaintanance}
@@ -125,6 +150,7 @@ function OperationType() {
           </button>
         </div>
       )}
+      <ToastContainer />
     </div>
   );
 }

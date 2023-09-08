@@ -2,6 +2,8 @@ import React from "react";
 import axios from 'axios'
 import TechnicianName from '../Components/TechnicianName'
 function Inspection() {
+
+  const[technicianName , setTechnicianName] = React.useState("")
     type ApiUser={
         id:string,
         username:string,
@@ -26,14 +28,20 @@ console.log(user);
     <div>
         <div>
         </div>
-          <div className="flex w-96 flex-col gap-5  ">
-            <h1 className="text-center text-xl ">Chose the Technician</h1>
-            <div className=" overflow-x-auto h-72 flex flex-col items-center ">
+          <div className="flex flex-col gap-5   ">
+            <div className="flex">
+          <h1 className=' ml-3 text-xl pb-3 '>the Technician: </h1>
+          <h1 className=' ml-1 text-xl pb-3 text-light-blue '>{technicianName}</h1>
+          </div>
+            <div className=" overflow-x-auto h-56 flex flex-col items-center ">
               {user.map((user) => {
                 if (user.type == "Technician")
                   return (
                     <>
-                    <a onClick={()=>{localStorage.setItem("technicianName" , user.username)}}>
+                    <a onClick={()=>{
+                      localStorage.setItem("technicianName" , user.username)
+                      setTechnicianName(user.username)
+                      }}>
                     <TechnicianName name ={user.username}/>
                     </a>
                     </>
