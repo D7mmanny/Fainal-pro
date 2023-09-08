@@ -6,6 +6,8 @@ import './App.css'
 import AdduUser from './Pages/AdduUser'
 import LogIn from "./Pages/LogIn"
 import HomeSupervisor from './Pages/HomeSupervisor'
+import HomeTechnican from './Pages/HomeTechnican'
+import HomeManager from './Pages/HomeManager'
 
 function App() {
 
@@ -15,6 +17,8 @@ function App() {
     <Routes>
       <Route path='/AddUser' element={<AdduUser/>}/>
       <Route path='/HomeSup' element={<HomeSupervisor/>}/>
+      <Route path='/HomeTech' element={<HomeTechnican/>}/>
+      <Route path='/HomeManager' element={<HomeManager/>}/>
       <Route path="/" element={ <LogIn/>} />
     </Routes>
     </>

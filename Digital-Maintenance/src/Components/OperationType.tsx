@@ -60,7 +60,7 @@ function OperationType() {
       Lab: localStorage.getItem("Lab"),
       Equipment: localStorage.getItem("Equipment"),
       MaintenanceType: localStorage.getItem("MaintenanceType"),
-      OperationType: "Inspection",
+      OperationType: "Maintanance",
       report: "",
       EquipmentStatus: "",
       dateOfCompletion: "",

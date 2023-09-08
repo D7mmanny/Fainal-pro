@@ -39,9 +39,11 @@ function LogIn() {
                    localStorage.setItem("Factory",item.Factory)
                    setError("")
 
-                   console.log(item);
 
-                    (nav("/HomeSup"))
+
+                    {item.type == "Supervisor" && nav("/HomeSup")}
+                    {item.type == "Technician" && nav("/HomeTech")}
+                    {item.type == "manager" && (nav("/HomeManager"))}
                 }
             })
         } else {
