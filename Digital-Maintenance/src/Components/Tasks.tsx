@@ -28,6 +28,7 @@ function Tasks() {
 
   return (
     <div className="flex gap-24 w-full">
+      <div >
       <div className="Tasks flex flex-col gap-4 py-5 bg-myGray drop-shadow-sm px-4 rounded-xl mb-5 overflow-auto">
         {taskApi.map((task) => (
           <a
@@ -49,7 +50,7 @@ function Tasks() {
           </a>
         ))}
       </div>
-
+      </div>
       <div className="w-full">
         {taskDetails == "Inspection" && <TechnicianInspection/>}
         {taskDetails == "Maintanance" && <h1>Maintanance</h1>}
