@@ -1,4 +1,3 @@
-import {useState} from "react"
 interface allstat{
     Technician:string;
     OperationStatus:string,
