@@ -36,3 +36,61 @@
 .map7{
     width: 50vh;
 }
+.map8{
+    width: 28vh;
+}
+.map9{
+    width: 25vh;
+}
+.map10{
+    width:6.5vh;
+    position: absolute;
+    top:76.8%;
+    left: 40%;
+}
+.map11{
+    width: 15vh;
+}
+.map12{
+    position: absolute;
+    width: 44.2vh;
+    top:79.8%;
+    left: 45%;  
+    rotate: 1deg;
+}
+.map13{
+    position: absolute;
+    width: 6vh;
+    top:88%;
+    left: 42.9%;  
+}
+.jeddah{
+    position: absolute;
+    top:69%;
+    left: 39%;  
+}
+.Najran{
+    position: absolute;
+    top:82%;
+    left: 50%;     
+}
+.Riyadh{
+    position: absolute;
+    top:60%;
+    left: 50%;        
+}
+.alkhubar{
+    position: absolute;
+    top:65%;
+    left: 61%;     
+}
+.north {
+    position: absolute;
+    top:33%;
+    left: 43%;       
+}
+.Tabuk{
+    position: absolute;
+    top:37%;
+    left: 28%;     
+}

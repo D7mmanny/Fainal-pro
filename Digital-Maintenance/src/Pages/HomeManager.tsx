@@ -10,6 +10,27 @@ import four from '../assets/4.svg'
 import five from '../assets/5.svg'
 import six from '../assets/6.svg'
 import seven from '../assets/7.svg'
+import eight from '../assets/8.svg'
+import nine from '../assets/9.svg'
+import ten from '../assets/10.svg'
+import Eleven from '../assets/11.svg'
+import Twelve from '../assets/12.svg'
+import thirteen from '../assets/13.svg'
+
+// Factory
+import Jeddah from '../assets/Jeddah.svg'
+import Najran from '../assets/Najran.svg'
+import Riyadh from '../assets/Riyadh.svg'
+import alkhubar from '../assets/alkhubar.svg'
+import north from '../assets/north.svg'
+import Tabuk from '../assets/Tabuk.svg'
+
+ 
+
+
+
+
+
 
 
 function HomeManager() {
@@ -37,6 +58,63 @@ function HomeManager() {
             src={six}/>
              <img className='absolute map7 top-72 mt-2 right-72 mr-7 pr-0.5 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
             src={seven}/>
+             <img className='absolute map8 top-72 mt-16 pl-1 right-96 mr-48 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+            src={eight}/>
+             <img className='absolute map9 top-72 mt-48 left-96 ml-20 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+            src={nine}/>
+             <img className=' map10 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+            src={ten}/>
+            <img className='absolute map11 top-96 mt-52 left-96 ml-44 pl-3 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+            src={Eleven}/>
+             <img className='map12 pl-2 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+            src={Twelve}/>
+             <img className='map13 pl-2 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+            src={thirteen}/>
+
+            {/* factory */}
+
+            {/* jeddah */}
+            <div className='jeddah flex items-center gap-1 text-transparent hover:text-white transition ease-in-out delay-300 '>
+            <img className=' transition ease-in-out delay-150 hover:-translate-y border-2 border-green-600 hover:border-white rounded-full cursor-pointer' 
+            src={Jeddah}/>
+            <p>Jeddah Factory</p>
+            </div>
+            
+            {/* Najran */}
+            <div className='Najran flex items-center gap-1 text-transparent hover:text-white transition ease-in-out delay-300 '>
+            <img className=' transition ease-in-out delay-150 hover:-translate-y border-2 border-green-600 hover:border-white rounded-full cursor-pointer' 
+            src={Najran}/>
+            <p>Najran Factory</p>
+            </div>
+
+             {/* Riyadh */}
+             <div className='Riyadh flex items-center gap-1 text-transparent hover:text-white transition ease-in-out delay-300 '>
+            <img className=' transition ease-in-out delay-150 hover:-translate-y border-2 border-green-600 hover:border-white rounded-full cursor-pointer' 
+            src={Riyadh}/>
+            <p>Riyadh Factory</p>
+            </div>
+
+            {/* alkhubar */}
+            <div className='alkhubar flex items-center gap-1 text-transparent hover:text-white transition ease-in-out delay-300 '>
+            <img className=' transition ease-in-out delay-150 hover:-translate-y border-2 border-green-600 hover:border-white rounded-full cursor-pointer' 
+            src={alkhubar}/>
+            <p>al-khubar Factory</p>
+            </div>
+
+            {/* north */}
+            <div className='north flex items-center gap-1 text-transparent hover:text-white transition ease-in-out delay-300 '>
+            <img className=' transition ease-in-out delay-150 hover:-translate-y border-2 border-green-600 hover:border-white rounded-full cursor-pointer' 
+            src={north}/>
+            <p>North Factory</p>
+            </div>
+
+            {/* Tabuk */}
+            <div className='Tabuk flex items-center gap-1 text-transparent hover:text-white transition ease-in-out delay-300 '>
+            <img className=' transition ease-in-out delay-150 hover:-translate-y border-2 border-green-600 hover:border-white rounded-full cursor-pointer' 
+            src={Tabuk}/>
+            <p>Tabuk Factory</p>
+            </div>
+           
 
            </div>
         </div>
