@@ -11,6 +11,8 @@ import HomeTechnican from './Pages/HomeTechnican'
 import HomeManager from './Pages/HomeManager'
 import Dashboard from './Pages/Dashboard'
 import TechnicianReport from './Pages/TechnicianReport'
+import FactoryReports from './Pages/FactoryReports'
+
 function App() {
 
 
@@ -23,6 +25,8 @@ function App() {
       <Route path='/HomeManager' element={<HomeManager/>}/>
       <Route path='/Dashboard' element={<Dashboard/>}/>
       <Route path='/TechnicianReport' element={<TechnicianReport/>}/>
+      <Route path='/FactoryReports' element={<FactoryReports/>}/>
+
       <Route path="/" element={ <LogIn/>} />
     </Routes>
     </>
