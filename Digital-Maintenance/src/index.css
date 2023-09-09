@@ -14,55 +14,86 @@
     width: 100%;
 }
 .map1{
+    position: absolute;
     width: 36vh;
+    top:23.2%;
+    left: 32.1%;  
 }
 .map2{
-    width: 22.1vh;
+    position: absolute;
+    width: 22vh;
+    top: 25.2%;
+    left: 30%;  
 }
-.map3{
+.map3{ 
+    position: absolute;
     width: 27vh;
+    top: 33%;
+    left: 23.8%;  
 }
 .map4{
-    width: 25vh;
+    width: 26vh;
     rotate: -1deg;
+    position: absolute;
+    top: 38.6%;
+    left: 35.2%;  
 }
 .map5{
     width: 26vh;
     rotate: 1deg;
+    position: absolute;
+    top: 45%;
+    left: 29.1%; 
+    
 }
 .map6{
     width: 18vh;
+    position: absolute;
+    top: 40%;
+    left: 39.3%; 
 }
 .map7{
-    width: 50vh;
+    width: 49.5vh;
+    position: absolute;
+    top: 37.5%;
+    left: 48%; 
 }
 .map8{
-    width: 28vh;
+    width: 28.4vh;
+    position: absolute;
+    top: 44%;
+    left: 41.3%; 
 }
 .map9{
     width: 25vh;
+    position: absolute;
+    top: 61.5%;
+    left: 34.2%; 
 }
 .map10{
-    width:6.5vh;
+    width:6.9vh;
     position: absolute;
     top:76.8%;
-    left: 40%;
+    left: 40.2%;
 }
 .map11{
     width: 15vh;
+    position: absolute;
+    top:76%;
+    left: 42%;
 }
 .map12{
     position: absolute;
     width: 44.2vh;
-    top:79.8%;
+    top:79.5%;
     left: 45%;  
     rotate: 1deg;
 }
 .map13{
     position: absolute;
     width: 6vh;
-    top:88%;
-    left: 42.9%;  
+    top:87.4%;
+    left: 42.6%;  
 }
 .jeddah{
     position: absolute;

@@ -39,32 +39,32 @@ function HomeManager() {
         <Nav/>      
         <div className='Home bg-dark-blue'>
           {/* Map background */}
-          <img className='Home'
+          <img className='w-screen'
            src={Map}/>
            
            {/*Saudi Map*/}
            <div>
-            <img className='absolute map1 top-44 mt-2 left-96 ml-14 pl-1 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer ' 
+            <img className='map1 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer ' 
             src={one}/>
-             <img className='absolute map2 top-44 mt-5 left-96 ml-9 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+             <img className=' map2  transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
             src={two}/>
-             <img className='absolute map3 top-60 mt-5 left-80 ml-0.5 pl-1 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+             <img className=' map3 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
             src={three}/>
-            <img className='absolute map4 top-72 mt-4 left-96 ml-24  transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+            <img className=' map4 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
             src={four}/>
-             <img className='absolute map5 top-80 mt-9 left-96 ml-3 pr-0.5 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+             <img className=' map5 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
             src={five}/>
-            <img className='absolute map6 top-72 mt-6 left-96 ml-44 pr-0.5 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+            <img className=' map6 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
             src={six}/>
-             <img className='absolute map7 top-72 mt-2 right-72 mr-7 pr-0.5 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+             <img className=' map7 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
             src={seven}/>
-             <img className='absolute map8 top-72 mt-16 pl-1 right-96 mr-48 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+             <img className=' map8 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
             src={eight}/>
-             <img className='absolute map9 top-72 mt-48 left-96 ml-20 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+             <img className=' map9 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
             src={nine}/>
              <img className=' map10 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
             src={ten}/>
-            <img className='absolute map11 top-96 mt-52 left-96 ml-44 pl-3 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
+            <img className=' map11  transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
             src={Eleven}/>
              <img className='map12 pl-2 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer' 
             src={Twelve}/>
