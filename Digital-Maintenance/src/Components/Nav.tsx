@@ -17,7 +17,7 @@ function Nav() {
         <nav className="bg-dark-blue flex justify-between">
           <div className="flex gap-5 justify-center items-center">
             <img className="w-14 py-3 ml-5" src={WhiteLogo} />
-            <a className=" cursor-pointer"><img className="w-10 py-3 ml-5" src={Direct} /></a>
+            <a href="/TechnicianReport" className=" cursor-pointer"><img className="w-10 py-3 ml-5" src={Direct} /></a>
           </div>
           <div className="flex justify-center items-center text-white gap-4">
             {name}
@@ -29,7 +29,7 @@ function Nav() {
         <nav className="bg-light-blue flex justify-between">
           <div className="flex gap-5 justify-center items-center">
             <img className="w-14 py-3 ml-5" src={WhiteLogo2} />
-            <a className=" cursor-pointer"><img className="w-10 py-3 ml-5" src={Direct} /></a>
+            <a href="/TechnicianReport" className=" cursor-pointer"><img className="w-10 py-3 ml-5" src={Direct} /></a>
           </div>
           <div className="flex justify-center items-center text-white gap-4">
             {name}
