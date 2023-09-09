@@ -9,3 +9,30 @@
     height: 70vh;
     width: 70vh;
 }
+.Home{
+    height: 90.7vh;
+    width: 100%;
+}
+.map1{
+    width: 36vh;
+}
+.map2{
+    width: 22.1vh;
+}
+.map3{
+    width: 27vh;
+}
+.map4{
+    width: 25vh;
+    rotate: -1deg;
+}
+.map5{
+    width: 26vh;
+    rotate: 1deg;
+}
+.map6{
+    width: 18vh;
+}
+.map7{
+    width: 50vh;
+}
