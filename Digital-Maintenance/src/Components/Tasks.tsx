@@ -13,7 +13,12 @@ function Tasks() {
     MaintenanceType: string;
     Factory:string;
     Lab:string;
+    Technician:string;
   };
+
+  //localsrorage
+  const name = localStorage.getItem("username");
+
   //state
   const [taskApi, setTaskApi] = React.useState<task[]>([]);
   const [taskDetails, setTaskDetails] = React.useState("");
@@ -31,8 +36,10 @@ function Tasks() {
     <div className="flex gap-24 w-full">
       <div >
       <div className="Tasks flex flex-col gap-4 py-5 bg-myGray drop-shadow-sm px-4 rounded-xl mb-5 overflow-auto">
-        {taskApi.map((task) => (
-          <a
+        {taskApi.map((task) => {
+          if(task.Technician == name){
+            return(
+              <a
             className="  cursor-pointer"
             onClick={() => {
               setTaskDetails(task.OperationType)
@@ -43,6 +50,7 @@ function Tasks() {
               localStorage.setItem("MaintenanceType",task.MaintenanceType)
             }}
           >
+            
             <TaskProps
               OperationType={task.OperationType}
               Equipment={task.Equipment}
@@ -51,7 +59,11 @@ function Tasks() {
               Lab={task.Lab}
             />
           </a>
-        ))}
+            )
+         }
+        }
+          
+        )}
       </div>
       </div>
       <div className="w-full">
