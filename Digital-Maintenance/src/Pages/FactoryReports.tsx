@@ -69,6 +69,7 @@ function FactoryReports() {
                 {taskApi.map((task) => {
                   return (
                     <AllFactoryReports
+                    id={task.id}
                     supervisorName={task.supervisorName}
                     type={task.type}
                     factory={task.factory}
