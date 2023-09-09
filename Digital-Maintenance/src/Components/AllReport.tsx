@@ -1,4 +1,5 @@
 interface allstat{
+  id:string;
     Technician:string;
     OperationStatus:string,
     Lab:string,
@@ -21,7 +22,7 @@ function AllReport(props:allstat) {
                  </h4>
             <h4 className='bg-white w-1/6 h-14 border-solid border-r-2 border-gray-500 flex justify-center items-center'>{props.Lab}</h4>
             <h4 className='bg-white w-1/6 h-14 border-solid border-r-2 border-gray-500 flex justify-center items-center'>{props.OperationType}</h4>
-            <h4 className='bg-white w-2/6 h-14 flex justify-center items-center'>{props.report}</h4>
+            <h4 className='bg-white w-2/6 h-14 flex justify-center items-center'><a href={`/TechnicianReport/${props.id}`}>{props.report}</a></h4>
         </div>
     </div>
   )

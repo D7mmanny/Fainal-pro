@@ -70,6 +70,7 @@ function TechnicianReport() {
               {taskApi.map((task) => {
                 return (
                   <AllReport
+                  id={task.id}
                     Technician={task.Technician}
                     OperationStatus={task.OperationStatus}
                     Lab={task.Lab}
