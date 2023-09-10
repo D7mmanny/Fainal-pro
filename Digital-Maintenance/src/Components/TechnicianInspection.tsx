@@ -45,7 +45,7 @@ function TechnicianInspection() {
             {taskTital}</h1>
         <textarea
             name="report"
-            className=" w-5/6 h-96 px-4"
+            className=" w-5/6 h-96 px-4 resize-none"
             placeholder="Write the report here..."
             onChange={handleInput}
         />

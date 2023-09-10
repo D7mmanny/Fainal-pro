@@ -111,7 +111,7 @@ function TechnicianMaintuinance() {
             <h4>Notes</h4>
         <textarea
             name="report"
-            className=" w-full h-32 rounded-2xl p-2"
+            className=" w-full h-32 rounded-2xl p-2 resize-none"
             placeholder="Write the report here..."
             onChange={handleInput}
         />

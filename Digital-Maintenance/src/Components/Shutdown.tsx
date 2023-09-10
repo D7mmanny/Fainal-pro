@@ -45,7 +45,7 @@ function Shutdown() {
           className="text-center py-1 px-8 rounded-xl mt-7 text-gray-700"
         />
         <textarea
-          className=" w-5/6 h-96 px-4"
+          className=" w-5/6 h-96 px-4 resize-none"
           placeholder="Write the report here..."
           onChange={(e) => setReport(e.target.value)}
           value={report}
