@@ -44,7 +44,7 @@ function TaskProps(props: Itask) {
           </div>
         </div>
       )}
-      { props.OperationStatus=="Complete" && (
+      {/* { props.OperationStatus == "Complete" && (
         <div className=" flex bg-gray-200 w-96 rounded-xl justify-start items-center gap-2">
           <div className=" py-14 px-1 bg-gray-400" />
           <div className="flex flex-col">
@@ -62,7 +62,7 @@ function TaskProps(props: Itask) {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

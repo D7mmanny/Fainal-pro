@@ -3,6 +3,7 @@ import TaskProps from "./TaskProps";
 import axios from "axios";
 import TechnicianInspection from "../Components/TechnicianInspection";
 import TechnicianMaintuinance from "./TechnicianMaintuinance";
+import Null from "./Null";
 
 function Tasks() {
   type task = {
@@ -21,7 +22,7 @@ function Tasks() {
 
   //state
   const [taskApi, setTaskApi] = React.useState<task[]>([]);
-  const [taskDetails, setTaskDetails] = React.useState("Inspection");
+  const [taskDetails, setTaskDetails] = React.useState("Null");
   const [taskTitle, setTaskTaitle] = React.useState(
     localStorage.getItem("taskLab")
   );
@@ -29,11 +30,12 @@ function Tasks() {
   //get Task Api info
   React.useEffect(() => {
     axios
-      .get("https://64f8e3b3824680fd21802caf.mockapi.io/Task")
-      .then((response) => {
-        setTaskApi(response.data);
-      });
+    .get("https://64f8e3b3824680fd21802caf.mockapi.io/Task")
+    .then((response) => {
+      setTaskApi(response.data);
+    });
   }, [taskTitle]);
+
 
   return (
 
@@ -58,7 +60,8 @@ function Tasks() {
                         "MaintenanceType",
                         task.MaintenanceType);  
                     } else{
-                      localStorage.setItem("taskDetails" , "null")
+                      localStorage.setItem("taskDetails" , "Null")
+                      setTaskDetails( "Null");
                     }
                   }}
                 >
@@ -79,6 +82,7 @@ function Tasks() {
       <div className=" w-full h-full flex justify-center">
         {taskDetails == "Inspection" && <TechnicianInspection />}
         {taskDetails == "Maintanance" && <TechnicianMaintuinance />}
+        {taskDetails == "Null" && <Null/>}
       </div>
     </div>
    </div>
