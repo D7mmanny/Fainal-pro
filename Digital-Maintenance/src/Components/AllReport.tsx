@@ -14,7 +14,7 @@ function AllReport(props:allstat) {
 
   return (
     <div >
-        <div className='border-solid border-b-2 flex border-gray-500 shadow-2xl '>
+        <div className='border-solid border-b-2 flex border-gray-500 '>
             <h4 className='bg-white w-1/6 h-14 border-solid border-r-2 border-gray-500 flex justify-center items-center'>{props.Technician}</h4>
             <h4 className='bg-white w-1/6 h-14 border-solid border-r-2 border-gray-500 flex justify-center items-center'>
                 {props.OperationStatus =="Complete" && <h4 className="bg-green-100 text-green-600 rounded-full p-2">Complete</h4>}

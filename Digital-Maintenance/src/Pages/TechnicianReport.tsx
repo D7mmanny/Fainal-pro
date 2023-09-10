@@ -49,7 +49,7 @@ function TechnicianReport() {
         </div>
         <div className=" shadow-2xl w-12/12 h-5/6 ">
           <div className=" m-5 h-5/6 border-solid border-2 border-gray-500 overflow-auto ">
-            <div className="border-solid border-b-2 flex border-gray-500 shadow-2xl sticky  top-0 ">
+            <div className="border-solid border-b-2 flex border-gray-500  sticky  top-0 ">
               <h4 className="bg-gray-300 w-1/6 h-14 border-solid border-r-2 border-gray-500 flex justify-center items-center">
                 Technician name
               </h4>
