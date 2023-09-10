@@ -53,7 +53,7 @@ function TechnicianInspection() {
         console.log(erorr);
         
     return (
-        <div className="w-9/12 h-full  p-5 ">
+        <div className="w-full xl:w-9/12 h-full  p-5 ">
         <div className=" h-full  border  flex flex-col items-center gap-10 rounded-xl pb-6 bg-white">
         <h1 className="h-10 w-6/12 text-center text-3xl underline font-bold decoration-1 mt-7 text-gray-700 ">
             {taskTital}</h1>
