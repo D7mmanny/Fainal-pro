@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .Tasks{
-    height: 67vh;
+    height: 75vh;
 }
 .Info{
     height: 70vh;
