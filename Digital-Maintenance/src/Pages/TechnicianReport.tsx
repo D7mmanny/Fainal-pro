@@ -85,7 +85,7 @@ function TechnicianReport() {
                       {task.OperationStatus !="Complete" && <h4 className="bg-red-100 text-red-600 rounded-full p-2 w-3/6 text-center">InComplete</h4>} 
                       </div>     
                     </td>
-                    <td className="px-4 py-3 text-sm border"><a href={`/FactoryReports/${task.id}`}>{task.report}</a></td>
+                    <td className="px-4 py-3 text-sm border"><a href={`/TechnicianReport/${task.id}`}>{task.report}</a></td>
                   </tr>
                   );
                 })}
