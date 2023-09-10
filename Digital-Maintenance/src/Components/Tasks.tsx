@@ -40,8 +40,8 @@ function Tasks() {
   return (
 
    <div className="flex justify-center w-screen">
-     <div className="flex w-10/12 bg-myGray rounded-3xl ">
-      <div className="w-1/2">
+     <div className="flex w-10/12 bg-myGray rounded-3xl mb-10 ">
+      <div className="w-2/3">
         <div className="Tasks flex flex-col gap-1 drop-shadow-sm px-4 rounded-xl overflow-auto">
           {taskApi.map((task) => {
             if (task.Technician == name) {
