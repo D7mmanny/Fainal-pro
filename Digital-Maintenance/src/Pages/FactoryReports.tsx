@@ -89,9 +89,9 @@ function FactoryReports() {
               <thead>
                 <tr className="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
                   <th className="px-4 py-3">Name</th>
-                  <th className="px-4 py-3">Age</th>
-                  <th className="px-4 py-3">Status</th>
-                  <th className="px-4 py-3">Date</th>
+                  <th className="px-4 py-3">Factory </th>
+                  <th className="px-4 py-3">Type</th>
+                  <th className="px-4 py-3">Report</th>
                 </tr>
               </thead>
               <tbody className="bg-white">
@@ -117,11 +117,11 @@ function FactoryReports() {
                         </div>
                       </div>
                     </td>
-                    <td className="px-4 py-3 text-md font-semibold border">{task.factory}</td>
+                    <td className="px-4 py-3 text-md font-semibold border">{task.factory} Factory </td>
                     <td className="px-4 py-3 text-xs border">
-                      <span className="px-2 py-1 font-semibold leading-tight bg-gray-100 rounded-sm"> 
-                      {task.type =="Monthly report" && <h4 className="bg-green-100 text-green-600 rounded-full p-2">Monthly report</h4>}
-                            {task.type =="Shutdown" && <h4 className="bg-red-100 text-red-600 rounded-full p-2">Shutdown</h4>} </span>
+                   
+                            {task.type =="Monthly report" && <h4 className="bg-green-100 text-green-600 rounded-full p-2 w-3/6">Monthly report</h4>}
+                            {task.type =="Shutdown" && <h4 className="bg-red-100 text-red-600 rounded-full p-2 w-3/6">Shutdown</h4>} 
                     </td>
                     <td className="px-4 py-3 text-sm border"><a href={`/FactoryReports/${task.id}`}>{task.report}</a></td>
                   </tr>
