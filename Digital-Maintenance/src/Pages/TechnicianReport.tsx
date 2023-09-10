@@ -39,7 +39,7 @@ function TechnicianReport() {
               stroke-width="2"
               stroke="currentColor"
               className="w-7 h-7 mr-4 cursor-pointer"
-              onClick={()=>{nav("/HomeManager")}}
+              onClick={()=>{nav("/HomeSup")}}
             >
               <path
                 stroke-linecap="round"
@@ -77,7 +77,7 @@ function TechnicianReport() {
                         </div>
                       </div>
                     </td>
-                    <td className="px-4 py-3 text-md font-semibold border">Lab {task.Lab}</td>
+                    <td className="px-4 py-3 text-md font-semibold border">{task.Lab}</td>
                     <td className="px-4 py-3 text-md font-semibold border">{task.OperationType}</td>
                     <td className="px-4 py-3 text-xs border">
                       <div className="flex justify-center items-center">
