@@ -55,7 +55,7 @@ function TechnicianMaintuinance() {
   console.log(erorr);
 
   return (
-    <div className="w-3/5  ">
+    <div className="w-8/12  ">
       <div className="h-full bg-myGray border  flex flex-col items-center gap-12 rounded-xl pb-6 ">
         <input
           name="title"

@@ -53,8 +53,8 @@ function TechnicianInspection() {
         console.log(erorr);
         
     return (
-        <div className="w-7/12 h-full ">
-        <div className=" h-full bg-myGray border  flex flex-col items-center gap-10 rounded-xl pb-6">
+        <div className="w-10/12 h-full ">
+        <div className=" h-full bg-myGray   flex flex-col items-center gap-10 rounded-xl pb-6">
         <h1 className="h-10 w-2/12 text-center py-1 px-8 rounded-xl mt-7 text-gray-700 bg-white">
             {taskTital}</h1>
         <textarea

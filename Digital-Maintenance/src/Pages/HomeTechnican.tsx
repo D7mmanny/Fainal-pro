@@ -12,7 +12,7 @@ function HomeTechnican() {
         <Nav/>
         {/* Supervisor Panel */}
         <div className='flex flex-col items-start gap-10'>
-        <h1 className='w-7/12 text-2xl mt-14'>Supervisor Panel</h1>
+        <h1 className='w-7/12 text-2xl mt-14 ml-44'>Supervisor Panel</h1>
           <div className='flex w-full'>
             <Tasks/>
             
