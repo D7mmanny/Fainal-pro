@@ -56,28 +56,49 @@ function TechnicianMaintuinance() {
   console.log(erorr);
 
   return (
-    <div className="w-3/5  ">
-      <div className="h-full bg-myGray border  flex flex-col items-center gap-12 rounded-xl pb-6 ">
-        <input
-          name="title"
-          value={taskTital + ""}
-          className="text-center py-1 px-8 rounded-xl mt-7 text-gray-700"
-        />
-        <div className=" w-5/6 flex justify-evenly ">
-          <input
-            className="rounded-xl h-8 text-center"
-            type="text"
-            value={"" + Equipment}
-          />
-
-          <input
-            className="rounded-xl h-8 text-center"
-            type="text"
-            value={"" + MaintenanceType}
-          />
+    <div className="w-full xl:w-9/12 h-full  p-5  ">
+      <div className="h-full bg-white border  flex flex-col items-center gap-12 rounded-xl pb-6 ">
+        <h1 className=" h-10 w-6/12 text-center text-3xl underline font-bold decoration-1 mt-7 text-gray-700">{taskTital}</h1>
+      
+        <div className=" w-full flex justify-evenly text-center gap-2 ">
+          <div className="w-1/2 flex flex-col gap-2 items-end">
+          <h3 className="w-10/12">Equipment</h3>
+          <h4 className="text-center h-10  rounded-xl  text-gray-700 w-10/12 border-2">{Equipment}</h4>
+          </div>
+        
+          <div className="w-1/2 flex flex-col gap-2">
+          <h3 className="w-10/12 ">Maintenance type</h3>
+          <h4 className="text-center h-10  rounded-xl  text-gray-700 w-10/12 border-2">{MaintenanceType}</h4>
+          </div>
         </div>
-        <h4>Equipment condition</h4>
-        <div className="flex w-5/6 justify-evenly">
+        
+        <div className="flex w-full text-center gap-2">
+
+          <div className="flex flex-col  justify-between w-1/2 items-end">
+            <h4 className="w-10/12">Current maintenance history</h4>
+            <input
+              name="dayDate"
+              type="date"
+              min="2023-09-02"
+              onChange={handleInput}
+              className="text-center h-10  rounded-xl  text-gray-700 w-10/12 border-2"
+            />
+          </div>
+
+          <div className="flex flex-col justify-between w-1/2 items-start">
+            <h4 className="w-10/12">Next maintenance date</h4>
+            <input
+              name="NextDate"
+              type="date"
+              min="2023-09-02"
+              onChange={handleInput}
+              className="text-center h-10  rounded-xl  text-gray-700 w-10/12 border-2"
+            />
+
+          </div>
+        </div>
+        <div className="flex w-5/6 gap-14">
+        <h4>Equipment condition:</h4>
           <div>
             <input
               className=""
@@ -98,33 +119,11 @@ function TechnicianMaintuinance() {
             <label>broken</label>
           </div>
         </div>
-
-        <div className="flex justify-between w-5/6">
-          <h4 className="">Current maintenance history</h4>
-          <input
-            name="dayDate"
-            type="date"
-            min="2023-09-02"
-            onChange={handleInput}
-            className="text-center  rounded-xl  text-gray-700"
-          />
-        </div>
-
-        <div className="flex justify-between w-5/6">
-          <h4 className="">Next maintenance date</h4>
-          <input
-            name="NextDate"
-            type="date"
-            min="2023-09-02"
-            onChange={handleInput}
-            className="text-center  rounded-xl  text-gray-700"
-          />
-        </div>
         <div className="w-5/6">
           <h4>Notes</h4>
           <textarea
             name="report"
-            className=" w-full h-32 rounded-2xl p-2 resize-none"
+            className=" w-full h-48  p-2 resize-none border-2"
             placeholder="Write the report here..."
             onChange={handleInput}
           />
