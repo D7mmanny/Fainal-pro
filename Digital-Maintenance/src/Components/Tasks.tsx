@@ -14,6 +14,7 @@ function Tasks() {
     Factory:string;
     Lab:string;
     Technician:string;
+    OperationStatus:string;
   };
 
   //localsrorage
