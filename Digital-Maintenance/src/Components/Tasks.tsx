@@ -40,14 +40,14 @@ function Tasks() {
   return (
 
    <div className="flex justify-center w-screen">
-     <div className="flex  w-10/12 bg-myGray rounded-3xl  ">
-      <div className="w-1/2 ">
-        <div className="Tasks flex flex-col gap-4 py-5 drop-shadow-sm px-4 rounded-xl mb-5 overflow-auto">
+     <div className="flex w-10/12 bg-myGray rounded-3xl ">
+      <div className="w-1/2">
+        <div className="Tasks flex flex-col gap-1 drop-shadow-sm px-4 rounded-xl overflow-auto">
           {taskApi.map((task) => {
             if (task.Technician == name) {
               return (
                 <a
-                  className="  cursor-pointer"
+                  className="cursor-pointer"
                   onClick={() => {
                     if (task.OperationStatus != "Complete") {
                       setTaskDetails(task.OperationType);
@@ -61,7 +61,7 @@ function Tasks() {
                         task.MaintenanceType);  
                     } else{
                       localStorage.setItem("taskDetails" , "Null")
-                      setTaskDetails( "Null");
+                      setTaskDetails("Null");
                     }
                   }}
                 >
