@@ -38,7 +38,7 @@ function TechReportsDetails()  {
                 <div className=" bg-myGray border w-5/12 h-5/6 flex flex-col items-center gap-10 rounded-xl pb-6">
                     <h1 className="w-4/12 h-10 bg-white text-center py-1 px-8 rounded-xl mt-7 text-gray-700">{taskApi.Lab}</h1>
                     <textarea
-                    className=" w-5/6 h-4/6 px-4"
+                    className=" w-5/6 h-4/6 px-4 resize-none"
                     placeholder="Write the report here..."
                     value={taskApi.report}
                     />   
