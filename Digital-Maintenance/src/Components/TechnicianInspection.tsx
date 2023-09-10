@@ -53,37 +53,41 @@ function TechnicianInspection() {
         console.log(erorr);
         
     return (
-        <div className="w-7/12 h-full ">
-        <div className=" h-full bg-myGray border  flex flex-col items-center gap-10 rounded-xl pb-6">
-        <h1 className="h-10 w-2/12 text-center py-1 px-8 rounded-xl mt-7 text-gray-700 bg-white">
+        <div className="w-9/12 h-full  p-5 ">
+        <div className=" h-full  border  flex flex-col items-center gap-10 rounded-xl pb-6 bg-white">
+        <h1 className="h-10 w-6/12 text-center text-3xl underline font-bold decoration-1 mt-7 text-gray-700 ">
             {taskTital}</h1>
-        <textarea
-            name="report"
-            className=" w-5/6 h-96 px-4 resize-none"
-            placeholder="Write the report here..."
-            onChange={handleInput}
-        />
-        <div className="flex justify-between w-5/6">
-            <h4 className="">Current maintenance history</h4>
+
+            <div className="w-full flex gap-1">
+            <div className=" w-1/2 text-center flex flex-col items-end ">
+            <h4 className=" w-10/12">Current maintenance history</h4>
             <input
                 name="dayDate"
                 type="date"
                 min="2023-09-02"
                 onChange={handleInput}
-                className="text-center  rounded-xl  text-gray-700"
+                className="text-center h-10  rounded-xl  text-gray-700 w-10/12 border-2"
             />
         </div>
 
-        <div className="flex justify-between w-5/6">
-            <h4 className="">Next maintenance date</h4>
+        <div className="w-1/2 text-center flex flex-col content-start">
+            <h4 className=" w-10/12">Next maintenance date</h4>
             <input
                 name="NextDate"
                 type="date"
                 min="2023-09-02"
                 onChange={handleInput}
-                className="text-center  rounded-xl  text-gray-700"
+                className="text-center h-10  rounded-xl  text-gray-700 w-10/12 border-2"
             />
         </div>
+            </div>
+        <textarea
+            name="report"
+            className=" w-5/6 h-96 px-4 resize-none border-2"
+            placeholder="Write the report here..."
+            onChange={handleInput}
+        />
+ 
         
 
         <button

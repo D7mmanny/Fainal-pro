@@ -13,7 +13,7 @@ function TaskProps(props: Itask) {
   return (
     <div>
       {props.OperationType == "Inspection" && props.OperationStatus!="Complete" && (
-        <div className="flex bg-InspectLightYelow w-96 rounded-xl justify-start items-center gap-2">
+        <div className="flex bg-InspectLightYelow w-96 lg:w-full rounded-xl justify-start items-center gap-2">
           <div className=" py-14 px-1 bg-InspectDarkYelow" />
           <div className="flex flex-col">
             <p className="text-xs ml-7 mb-3"> 2023/9/08</p>
@@ -29,7 +29,7 @@ function TaskProps(props: Itask) {
         </div>
       )}
       {props.OperationType == "Maintanance" && props.OperationStatus!="Complete" && (
-        <div className=" flex bg-MaintananceLightGreen w-96 rounded-xl justify-start items-center gap-2">
+        <div className=" flex bg-MaintananceLightGreen w-96 lg:w-full rounded-xl justify-start items-center gap-2">
           <div className=" py-14 px-1 bg-MaintananceDarkGreen" />
           <div className="flex flex-col">
             <p className="text-xs ml-7 mb-3"> 2023/9/08</p>
