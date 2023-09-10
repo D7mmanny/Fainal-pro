@@ -22,6 +22,7 @@ function Tasks() {
   //state
   const [taskApi, setTaskApi] = React.useState<task[]>([]);
   const [taskDetails, setTaskDetails] = React.useState("");
+  const [taskTitle , setTaskTaitle] = React.useState(localStorage.getItem("taskLab"));
 
   //get Task Api info
   React.useEffect(() => {
@@ -30,7 +31,7 @@ function Tasks() {
       .then((response) => {
         setTaskApi(response.data);
       });
-  }, []);
+  }, [taskTitle]);
 
   return (
     <div className="flex gap-24 w-full">
@@ -46,6 +47,7 @@ function Tasks() {
               localStorage.setItem("taskDetails", task.OperationType);
               localStorage.setItem("taskId",task.id)
               localStorage.setItem("taskLab",task.Lab)
+              setTaskTaitle(task.Lab)
               localStorage.setItem("Equipment",task.Equipment)
               localStorage.setItem("MaintenanceType",task.MaintenanceType)
             }}
