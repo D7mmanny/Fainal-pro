@@ -30,6 +30,8 @@ function TechnicianInspection() {
                 NextOperation:report.NextDate,
                 OperationStatus:"Complete"
             })
+            localStorage.setItem("taskDetails","null")
+            location.reload();
         }
 
     }

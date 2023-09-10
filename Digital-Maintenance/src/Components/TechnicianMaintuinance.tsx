@@ -32,6 +32,8 @@ function TechnicianMaintuinance() {
                 EquipmentStatus:report.EquipmentStatus,
                 OperationStatus:"Complete",
             })
+            localStorage.setItem("taskDetails","null")
+            location.reload();
         }
 
     }
@@ -65,7 +67,7 @@ function TechnicianMaintuinance() {
             <div>
             <input
             className=""
-            type="checkbox"
+            type="radio"
             name="EquipmentStatus" 
             value={"Intact"}
             onChange={handleInput}
@@ -74,7 +76,7 @@ function TechnicianMaintuinance() {
             </div>
             <div>
             <input 
-            type="checkbox" 
+            type="radio" 
             name="EquipmentStatus"
             value={"broken"}
             onChange={handleInput}
