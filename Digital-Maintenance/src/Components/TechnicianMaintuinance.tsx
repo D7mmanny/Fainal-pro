@@ -40,7 +40,7 @@ function TechnicianMaintuinance() {
         
     return (
         <div className="w-3/5  ">
-        <div className=" bg-myGray border  flex flex-col items-center gap-10 rounded-xl pb-6 ">
+        <div className="h-full bg-myGray border  flex flex-col items-center gap-12 rounded-xl pb-6 ">
         <input
             name="title"
             value={taskTital +""}

@@ -22,7 +22,7 @@ function Tasks() {
 
   //state
   const [taskApi, setTaskApi] = React.useState<task[]>([]);
-  const [taskDetails, setTaskDetails] = React.useState("");
+  const [taskDetails, setTaskDetails] = React.useState("Inspection");
   const [taskTitle , setTaskTaitle] = React.useState(localStorage.getItem("taskLab"));
 
   //get Task Api info
@@ -35,9 +35,9 @@ function Tasks() {
   }, [taskTitle]);
 
   return (
-    <div className="flex gap-24 w-full">
-      <div >
-      <div className="Tasks flex flex-col gap-4 py-5 bg-myGray drop-shadow-sm px-4 rounded-xl mb-5 overflow-auto">
+    <div className="flex gap-24 w-full " >
+      <div className="h-full">
+      <div className=" Tasks flex flex-col gap-4 py-5 bg-myGray drop-shadow-sm px-4 rounded-xl mb-5 overflow-auto">
         {taskApi.map((task) => {
           if(task.Technician == name){
             return(
@@ -69,7 +69,7 @@ function Tasks() {
         )}
       </div>
       </div>
-      <div className="w-full">
+      <div className="w-full h-full flex justify-center">
         {taskDetails == "Inspection" && <TechnicianInspection/>}
         {taskDetails == "Maintanance" && <TechnicianMaintuinance/>}
       </div>

@@ -37,8 +37,8 @@ function TechnicianInspection() {
         console.log(erorr);
         
     return (
-        <div className="w-2/3 h-full ">
-        <div className=" bg-myGray border  flex flex-col items-center gap-5 rounded-xl pb-6">
+        <div className="w-7/12 h-full ">
+        <div className=" h-full bg-myGray border  flex flex-col items-center gap-10 rounded-xl pb-6">
         <input
             name="title"
             value={taskTital +" Inspection"}
