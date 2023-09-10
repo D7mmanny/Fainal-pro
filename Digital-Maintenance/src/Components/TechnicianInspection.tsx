@@ -39,11 +39,8 @@ function TechnicianInspection() {
     return (
         <div className="w-7/12 h-full ">
         <div className=" h-full bg-myGray border  flex flex-col items-center gap-10 rounded-xl pb-6">
-        <input
-            name="title"
-            value={taskTital +" Inspection"}
-            className="text-center py-1 px-8 rounded-xl mt-7 text-gray-700"
-        />
+        <h1 className="h-10 w-2/12 text-center py-1 px-8 rounded-xl mt-7 text-gray-700 bg-white">
+            {taskTital}</h1>
         <textarea
             name="report"
             className=" w-5/6 h-96 px-4"
