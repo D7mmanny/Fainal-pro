@@ -1,7 +1,7 @@
 import axios from "axios"
-import React from "react"
 import {useState} from "react"
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function TechnicianInspection() {
@@ -20,6 +20,8 @@ function TechnicianInspection() {
         setReport({ ...report, [e.target.name]: e.target.value });
     };
 
+   
+
     const submitReport = () => {
         if(report.report == "" ||report.dayDate =="" ||report.NextDate==""){
             setErorr("empty")
@@ -30,6 +32,20 @@ function TechnicianInspection() {
                 NextOperation:report.NextDate,
                 OperationStatus:"Complete"
             })
+            //alert
+       toast.success('The task has been sent successfully', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+            setTimeout(function(){
+                window.location.reload();
+             }, 2000);
         }
 
     }
@@ -77,7 +93,7 @@ function TechnicianInspection() {
             Submit
         </button>
         </div>
-        
+        <ToastContainer />  
     </div>
     )
     }

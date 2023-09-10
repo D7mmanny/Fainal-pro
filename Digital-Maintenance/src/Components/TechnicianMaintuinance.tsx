@@ -1,6 +1,7 @@
 import axios from "axios";
-import React from "react";
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function TechnicianMaintuinance() {
 
@@ -34,6 +35,20 @@ function TechnicianMaintuinance() {
         EquipmentStatus: report.EquipmentStatus,
         OperationStatus: "Complete",  
     });
+    //alert
+    toast.success('The task has been sent successfully', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    setTimeout(function(){
+        window.location.reload();
+     }, 2000);
     }
   };
 
@@ -121,6 +136,7 @@ function TechnicianMaintuinance() {
           Submit
         </button>
       </div>
+      <ToastContainer />
     </div>
   );
 }
