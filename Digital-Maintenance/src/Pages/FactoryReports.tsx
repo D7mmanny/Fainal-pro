@@ -28,16 +28,16 @@ function FactoryReports() {
       <div>
         <Nav />
       </div>
-      {/* <div className="p-10 h-screen flex flex-col items-center gap-8">
-          <div className="w-10/12 flex justify-between items-center ">
-            <h1 className="pl-3 text-4xl ">Factory Reports</h1>
+      <section className="container mx-auto p-6 font-mono">
+      <div className="w-full flex justify-between items-center py-5">
+            <h1 className="pl-3 text-2xl ">Factory Reports</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="2"
               stroke="currentColor"
-              className="w-7 h-7 mr-7 cursor-pointer"
+              className="w-7 h-7 mr-4 cursor-pointer"
               onClick={()=>{nav("/HomeManager")}}
             >
               <path
@@ -47,42 +47,7 @@ function FactoryReports() {
               />
             </svg>
           </div>
-          <div className=" shadow-2xl w-10/12 h-5/6 ">
-            <div className=" mt-5 mx-5 h-5/6 border-solid border-2 border-gray-500 overflow-auto ">
-              <div className="border-solid border-b-2 flex border-gray-500 sticky top-0 ">
-                <h4 className="bg-gray-300 w-1/5 h-14 border-solid border-r-2 border-gray-500 flex justify-center items-center">
-                Supervisor name
-                </h4>
-                <h4 className="bg-gray-300 w-1/5 h-14 border-solid border-r-2 border-gray-500 flex justify-center items-center">
-                Type
-                </h4>
-                <h4 className="bg-gray-300 w-1/5 h-14 border-solid border-r-2 border-gray-500 flex justify-center items-center">
-                Factory
-                </h4>
-                
-                <h4 className="bg-gray-300 w-2/5 h-14 flex justify-center items-center">
-                  Report
-                </h4>
-              </div>
-              <div>
-                {taskApi.map((task) => {
-                  return (
-                    <AllFactoryReports
-                    id={task.id}
-                    supervisorName={task.supervisorName}
-                    type={task.type}
-                    factory={task.factory}
-                      report="show details"
-                    />
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </div> */}
 
-      {/* <!-- component --> */}
-      <section className="container mx-auto p-6 font-mono">
         <div className="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
           <div className="w-full overflow-x-auto">
             <table className="w-full">
@@ -119,9 +84,11 @@ function FactoryReports() {
                     </td>
                     <td className="px-4 py-3 text-md font-semibold border">{task.factory} Factory </td>
                     <td className="px-4 py-3 text-xs border">
-                   
-                            {task.type =="Monthly report" && <h4 className="bg-green-100 text-green-600 rounded-full p-2 w-3/6">Monthly report</h4>}
-                            {task.type =="Shutdown" && <h4 className="bg-red-100 text-red-600 rounded-full p-2 w-3/6">Shutdown</h4>} 
+                      <div className="flex justify-center items-center">
+                      {task.type =="Monthly report" && <h4 className="bg-green-100 text-green-600 rounded-full p-2 w-3/6 text-center">Monthly report</h4>}
+                            {task.type =="Shutdown" && <h4 className="bg-red-100 text-red-600 rounded-full p-2 w-3/6 text-center">Shutdown</h4>} 
+                      </div>
+                           
                     </td>
                     <td className="px-4 py-3 text-sm border"><a href={`/FactoryReports/${task.id}`}>{task.report}</a></td>
                   </tr>

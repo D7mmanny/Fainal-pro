@@ -14,6 +14,7 @@ import TechnicianReport from './Pages/TechnicianReport'
 import FactoryReports from './Pages/FactoryReports'
 import SupervisorReport from './Pages/SupervisorReport'
 import TechReportsDetails from './Pages/TechReportsDetails'
+import CityFactoryReports from './Components/CityFactoryReports'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <Route path='/TechnicianReport/:id' element={<TechReportsDetails/>}/>
       <Route path='/FactoryReports' element={<FactoryReports/>}/>
       <Route path='/FactoryReports/:id' element={<SupervisorReport/>}/>
+      <Route path='/CityFactoryReports' element={<CityFactoryReports/>}/>
 
       <Route path="/" element={ <LogIn/>} />
     </Routes>
