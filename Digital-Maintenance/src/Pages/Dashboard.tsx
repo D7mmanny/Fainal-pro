@@ -105,16 +105,16 @@ function Dashboard() {
           <div className="flex flex-col items-center">
           <img className="pt-12" src={User} />
           <h1 className="text-xl text-white mt-5"> {name}</h1>
-          <hr className="border border-gray-400 w-full mt-8 border-spacing-0.5" />
+          <hr className="border border-gray-400 lg:w-full w-48 mt-8 border-spacing-0.5" />
           <a  onClick={() => {
                   setActive("Info");
-                }} className=" hover:bg-cyan-950 cursor-pointer text-center"><h1 className="text-lg text-white py-4 px-20 mx-1"> personal information</h1></a>
+                }} className=" hover:bg-cyan-950 cursor-pointer text-center"><h1 className="text-lg text-white py-4 px-10 mx-1"> personal information</h1></a>
           </div>
 
-          <a onClick={logOut} className=" hover:bg-cyan-950 cursor-pointer text-center"><h1 className="text-lg text-white py-4 px-32 mx-1"> Log out</h1></a>
+          <a onClick={logOut} className=" hover:bg-cyan-950 cursor-pointer text-center"><h1 className="text-lg  text-white lg:py-4 py-10 lg:px-20 mx-1 lg:mt-0 mt-52"> Log out</h1></a>
           
         </div>
-        <div className="w-3/4 border flex justify-center items-center">
+        <div className="w-full flex justify-center lg:items-center md:items-start md:mt-14">
           {active == "Info" && <Info/>}
         </div>
         

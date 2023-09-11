@@ -30,9 +30,9 @@ const [active , setActive] = React.useState("")
         
         {/* Supervisor Panel */}
         <div className='flex flex-col items-center gap-10 '>
-        <h1 className='w-7/12 text-2xl mt-14'>Supervisor Panel</h1>
-        <div className='w-8/12 h-full pb-20 shadow-2xl flex flex-col gap-9 justify-center items-center'>
-            <div className='flex gap-32 text-light-blue mt-8'>  
+        <h1 className=' text-2xl mt-14'>Supervisor Panel</h1>
+        <div className='lg:w-8/12 h-full pb-20 shadow-2xl flex flex-col gap-9 justify-center items-center'>
+            <div className='flex lg:gap-32 gap-10 mx-10 text-light-blue mt-8'>  
                     <button 
                     className='py-3 px-12 rounded-full shadow-lg bg-myGray hover:bg-gray-200'
                     onClick={()=>{setActive("newTask")}}>
