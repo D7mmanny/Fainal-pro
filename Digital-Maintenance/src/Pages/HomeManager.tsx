@@ -31,9 +31,9 @@ function HomeManager() {
   return (
     <div>
       <Nav />
-      <div className="Home bg-dark-blue">
+      <div className=" bg-dark-blue  ">
         {/* Map background */}
-        <img className="w-screen" src={Map} />
+        <img className="w-screen  h-screen lg:h-fit" src={Map} />
 
         {/*Saudi Map*/}
         <div>
