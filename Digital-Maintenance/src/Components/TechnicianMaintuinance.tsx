@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import React from "react";
 
 function TechnicianMaintuinance() {
     
@@ -19,7 +20,7 @@ function TechnicianMaintuinance() {
     OperationStatus: "",
   });
 
-  const handleInput = (e) => {
+  const handleInput = (e:React.ChangeEvent<HTMLTextAreaElement> |React.ChangeEvent<HTMLInputElement> ) => {
     e.persist();
     setReport({ ...report, [e.target.name]: e.target.value });
   };

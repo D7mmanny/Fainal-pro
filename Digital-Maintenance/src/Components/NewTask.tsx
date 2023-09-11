@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from "react";
 
 
 function NewTask() {
@@ -7,7 +8,7 @@ const [Lab,setLab]=useState({
   lab:""
 })
 
-  const handleInput = (e) => {
+  const handleInput = (e:React.ChangeEvent<HTMLSelectElement>) => {
     e.persist();
     setLab({ ...Lab, [e.target.name]: e.target.value });
    
