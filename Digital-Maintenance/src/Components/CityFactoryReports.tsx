@@ -3,6 +3,7 @@ import axios from "axios";
 import Nav from "../Components/Nav";
 import user from '../assets/user.svg'
 import { useNavigate } from "react-router-dom";
+import SuperReportComponent from "./SuperReportComponent";
 
 function CityFactoryReports() {
     const nav = useNavigate();
@@ -23,6 +24,19 @@ function CityFactoryReports() {
         setTaskApi(response.data);
       });
   }, []);
+  // popUp
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  if (modal) {
+    document.body.classList.add("active-modal");
+  } else {
+    document.body.classList.remove("active-modal");
+  }
+
   return (
     <div>
       <div>
@@ -109,16 +123,61 @@ function CityFactoryReports() {
                               )}
                             </div>
                           </td>
-                          <td className="px-4 py-3 text-sm border">
-                            <a href={`/FactoryReports/${task.id}`}>
-                              {task.report}
-                            </a>
-                          </td>
+                          <td className="px-4 py-3 text-sm border w-1/4 h-1/4">
+                        <a
+                          className="flex items-center justify-between hover:text-light-blue cursor-pointer"
+                          onClick={() => {
+                            setModal(!modal);
+                            localStorage.setItem("taskId", task.id);
+                          }}
+                        >
+                          {" "}
+                          Show Report
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            className="w-4 h-3"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                            />
+                          </svg>
+                        </a>
+                      </td>
                         </tr>
                       );
                     }
                   }
                 })}
+                {modal && (
+                  <div className="modal">
+                    <div onClick={toggleModal} className="overlay"></div>
+                    <div className="modal-content flex justify-center items-center">
+                      <SuperReportComponent />
+                      <button className="close-modal" onClick={toggleModal}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          className="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                )}
               </tbody>
             </table>
           </div>
