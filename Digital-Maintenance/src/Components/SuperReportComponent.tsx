@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import pdf from '../assets/Pdf.svg'
+
 
 function SuperReportComponent() {
   type task = {
@@ -38,7 +40,6 @@ function SuperReportComponent() {
 
   return (
     <div className="flex flex-col">
-    <button className="text-start" onClick={handleDownload}>Download as PDF</button>
     <div>
       {taskApi.map((task) => {
         if (taskId == task.id) {
@@ -73,6 +74,11 @@ function SuperReportComponent() {
           );
         }
       })}
+      </div>
+      <div className="flex justify-center">
+      <button className="flex bg-red-700 text-white mt-5 px-3 py-1 rounded-lg" onClick={handleDownload}>
+        Download as PDF
+        <img className="w-5" src={pdf}/></button>
       </div>
     </div>
   );
