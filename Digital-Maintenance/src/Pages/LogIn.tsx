@@ -54,7 +54,7 @@ function LogIn() {
     }
   return (
     <div className=' bg-myGray h-screen'>
-        <div className='lg:pt-28 md:pt-52 sm:pt-52 max-sm:pt-40'>
+        <div className='lg:pt-28 pt-96'>
         <div className='flex w-4/5  justify-center items-center border lg:ml-36 md:ml-20 sm:ml-20 max-sm:ml-10 max-sm:flex-col-reverse drop-shadow-lg bg-white'>
             <div className=' flex flex-col w-2/5 justify-center items-center gap-5 max-sm:gap-2'> 
                 <img 
