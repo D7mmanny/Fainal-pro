@@ -30,7 +30,7 @@ function TechReportComponant() {
 
           return (
             <>
-              <div className=" bg-white ReportComponent flex flex-col items-center gap-7 shadow-lg rounded-sm">
+              <div className=" bg-white ReportComponent flex flex-col items-center gap-7 shadow-lg rounded-sm ">
                 <h1 className="text-xl mt-8 font-semibold underline">
                   {task.Lab}
                 </h1>
