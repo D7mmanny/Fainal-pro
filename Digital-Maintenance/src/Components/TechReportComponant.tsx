@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 function TechReportComponant() {
   type task = {
@@ -12,6 +14,20 @@ function TechReportComponant() {
     dateOfCompletion: string;
     NextOperation: string;
   };
+
+  const handleDownload = () => {
+    const input = document.getElementById('pdf-content');
+
+    if (input) {
+      html2canvas(input).then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF('p', 'mm', 'a4'); // 'p' for portrait mode, 'mm' for millimeters, 'a4' for A4 size
+        pdf.addImage(imgData, 'PNG', 0, 0, 210, 297); // A4 dimensions: 210mm x 297mm
+        pdf.save('webpage.pdf');
+      });
+    }
+  };
+
   const [taskApi, setTaskApi] = React.useState<task[]>([]);
   const taskId = localStorage.getItem("taskId");
   React.useEffect(() => {
@@ -24,13 +40,17 @@ function TechReportComponant() {
 
   return (
     <div>
+      <button onClick={handleDownload}>Download as PDF</button>
+      <div >
       {taskApi.map((task) => {
         if (taskId == task.id) {
           console.log("success");
 
           return (
             <>
-              <div className=" bg-white ReportComponent flex flex-col items-center gap-7 shadow-lg rounded-sm ">
+
+            <div className="shadow-lg">
+              <div id="pdf-content" className=" bg-white ReportComponent flex flex-col items-center gap-7  rounded-sm">
                 <h1 className="text-xl mt-8 font-semibold underline">
                   {task.Lab}
                 </h1>
@@ -62,10 +82,13 @@ function TechReportComponant() {
                   </div>
                 </div>
               </div>
+              </div>
             </>
           );
         }
       })}
+      </div>
+    
     </div>
   );
 }
