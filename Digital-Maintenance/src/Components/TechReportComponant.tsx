@@ -33,7 +33,7 @@ function TechReportComponant() {
                   {task.Lab}
                 </h1>
                 <div>
-                  <hr className="border border-black w-full border-1" />
+                  <hr className="border border-black border-1" />
                   <div className="text-sm flex gap-9 mt-2 mb-2">
                     <h1 className="ml-1">Technican name: {task.Technician}</h1>
                     
