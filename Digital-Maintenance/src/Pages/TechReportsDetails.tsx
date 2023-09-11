@@ -4,6 +4,8 @@ import axios from "axios"
 import { useState, useEffect } from "react";
 
 function TechReportsDetails()  {
+    const Login = localStorage.getItem("Login")
+    if(Login != "true") {window.location.href="/";}
     const {id} = useParams()
     
       const [taskApi, setTaskApi] = useState({

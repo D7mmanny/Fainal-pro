@@ -38,6 +38,7 @@ function LogIn() {
                    localStorage.setItem("email",item.email)
                    localStorage.setItem("type",item.type)
                    localStorage.setItem("Factory",item.Factory)
+                   localStorage.setItem("Login","true")
                    setError("")
 
 

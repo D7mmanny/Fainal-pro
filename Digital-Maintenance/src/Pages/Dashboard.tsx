@@ -8,6 +8,8 @@ import Direct from "../assets/direct.svg";
 import User from "../assets/user.svg"
 
 function Dashboard() {
+  const Login = localStorage.getItem("Login")
+  if(Login != "true") {window.location.href="/";}
   const [active, setActive] = React.useState("Info");
   const nav = useNavigate();
   const type = localStorage.getItem("type");

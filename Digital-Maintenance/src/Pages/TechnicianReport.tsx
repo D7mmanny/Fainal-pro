@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import TechReportComponant from "../Components/TechReportComponant";
 
 function TechnicianReport() {
+  const Login = localStorage.getItem("Login")
+  if(Login != "true") {window.location.href="/";}
   const nav = useNavigate();
   type task = {
     id: string;

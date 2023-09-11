@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import SuperReportComponent from "./SuperReportComponent";
 
 function CityFactoryReports() {
+  const Login = localStorage.getItem("Login")
+  if(Login != "true") {window.location.href="/";}
     const nav = useNavigate();
   const CityFactoryReports = localStorage.getItem("CityFactoryReports");
   type task = {

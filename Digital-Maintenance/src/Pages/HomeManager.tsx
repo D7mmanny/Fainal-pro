@@ -27,6 +27,8 @@ import north from "../assets/north.svg";
 import Tabuk from "../assets/Tabuk.svg";
 
 function HomeManager() {
+  const Login = localStorage.getItem("Login")
+  if(Login != "true") {window.location.href="/";}
   const nav = useNavigate();
   return (
     <div>

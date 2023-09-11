@@ -8,6 +8,8 @@ import "../Components/Modal.css";
 import SuperReportComponent from "../Components/SuperReportComponent";
 
 function FactoryReports() {
+  const Login = localStorage.getItem("Login")
+  if(Login != "true") {window.location.href="/";}
   const nav = useNavigate();
   type task = {
     id: string;
