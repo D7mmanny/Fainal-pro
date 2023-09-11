@@ -25,7 +25,7 @@ function CityFactoryReports() {
       });
   }, []);
   // popUp
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = React.useState(false);
 
   const toggleModal = () => {
     setModal(!modal);
