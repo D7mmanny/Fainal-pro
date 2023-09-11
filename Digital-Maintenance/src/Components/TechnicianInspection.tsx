@@ -61,7 +61,7 @@ function TechnicianInspection() {
 
             <div className="w-full flex gap-1">
             <div className=" w-1/2 text-center flex flex-col items-end ">
-            <h4 className=" w-10/12">Current maintenance date</h4>
+            <h4 className=" w-10/12">Current Inspection date</h4>
             <input
                 name="dayDate"
                 type="date"
@@ -72,7 +72,7 @@ function TechnicianInspection() {
         </div>
 
         <div className="w-1/2 text-center flex flex-col content-start">
-            <h4 className=" w-10/12">Next maintenance date</h4>
+            <h4 className=" w-10/12">Next Inspection date</h4>
             <input
                 name="NextDate"
                 type="date"
