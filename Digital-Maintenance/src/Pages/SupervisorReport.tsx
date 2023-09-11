@@ -40,7 +40,7 @@ function SupervisorReport() {
                     />   
                     <div className="w-full flex justify-evenly">
                         <div className="flex w-1/2 justify-evenly">
-                            <h1>supervisorName :</h1>
+                            <h1>supervisorName:</h1>
                             <h1 className="w-5/12 h-7 bg-white text-center  rounded-xl   text-gray-700">{taskApi.supervisorName}</h1>
                         </div>  
                         <div className="flex w-1/2 justify-evenly">
