@@ -62,13 +62,6 @@ function FactoryReports() {
               <tbody className="bg-white">
                 {taskApi.map((task) => {
                   return (
-                    // <AllFactoryReports
-                    //   id={task.id}
-                    //   supervisorName={task.supervisorName}
-                    //   type={task.type}
-                    //   factory={task.factory}
-                    //   report="show details"
-                    // />
                     <tr className="text-gray-700">
                     <td className="px-4 py-3 border">
                       <div className="flex items-center text-sm">
@@ -90,7 +83,26 @@ function FactoryReports() {
                       </div>
                            
                     </td>
-                    <td className="px-4 py-3 text-sm border"><a href={`/FactoryReports/${task.id}`}>{task.report}</a></td>
+                    <td className="px-4 py-3 text-sm border w-1/4 h-1/4">
+                          <a className="flex items-center justify-between hover:text-light-blue" href={`/FactoryReports/${task.id}`}>
+                            {" "}
+                            Show Report
+                            <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          className="w-4 h-3"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                          />
+                        </svg>
+                          </a>
+                        </td>
                   </tr>
                   );
                 })}

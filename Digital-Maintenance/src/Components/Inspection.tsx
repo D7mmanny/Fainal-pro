@@ -2,6 +2,7 @@ import React from "react";
 import axios from 'axios'
 import TechnicianName from '../Components/TechnicianName'
 function Inspection() {
+  const SubFactory = localStorage.getItem("Factory")
 
   const[technicianName , setTechnicianName] = React.useState("")
     type ApiUser={
@@ -35,7 +36,7 @@ console.log(user);
           </div>
             <div className=" overflow-x-auto h-56 flex flex-col items-center ">
               {user.map((user) => {
-                if (user.type == "Technician")
+                if (user.type == "Technician" && user.Factory == SubFactory)
                   return (
                     <>
                     <a onClick={()=>{
