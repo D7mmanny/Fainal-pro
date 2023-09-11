@@ -12,7 +12,8 @@ import OperationType from '../Components/OperationType'
 
 
 function HomeSupervisor() {
-  
+  const Login = localStorage.getItem("Login")
+  if(Login != "true") {window.location.href="/";}
 
   
 

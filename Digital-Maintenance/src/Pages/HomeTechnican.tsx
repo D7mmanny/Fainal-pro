@@ -5,7 +5,8 @@ import Nav from '../Components/Nav'
 import Tasks from '../Components/Tasks'
 
 function HomeTechnican() {
-
+  const Login = localStorage.getItem("Login")
+  if(Login != "true") {window.location.href="/";}
 
   return (
     <div>
