@@ -4,6 +4,7 @@ import user from "../assets/user.svg";
 import Nav from "../Components/Nav";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import TechReportComponant from "../Components/TechReportComponant";
 
 function TechnicianReport() {
   const nav = useNavigate();
@@ -23,6 +24,19 @@ function TechnicianReport() {
         setTaskApi(response.data);
       });
   }, []);
+
+  // popUp
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  if (modal) {
+    document.body.classList.add("active-modal");
+  } else {
+    document.body.classList.remove("active-modal");
+  }
 
   return (
     <div>
@@ -109,30 +123,47 @@ function TechnicianReport() {
                           )}
                         </div>
                       </td>
-                      
-                        <td className="px-4 py-3 text-sm border w-1/4 h-1/4">
-                          <a className="flex items-center justify-between hover:text-light-blue" href={`/TechnicianReport/${task.id}`}>
-                            {" "}
-                            Show Report
-                            <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          className="w-4 h-3"
+
+                      <td className="px-4 py-3 text-sm border w-1/4 h-1/4">
+                        <a
+                          className="flex items-center justify-between hover:text-light-blue cursor-pointer"
+                          onClick={()=>{
+                            setModal(!modal);
+                            localStorage.setItem("taskId",task.id)
+                          }}
                         >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                          />
-                        </svg>
-                          </a>
-                        </td>
+                          {" "}
+                          Show Report
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            className="w-4 h-3"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                            />
+                          </svg>
+                        </a>
+                      </td>
                     </tr>
                   );
                 })}
+                {modal && (
+                  <div className="modal">
+                    <div onClick={toggleModal} className="overlay"></div>
+                    <div className="modal-content ">
+                      <TechReportComponant/>
+                      <button className="close-modal" onClick={toggleModal}>
+                        CLOSE
+                      </button>
+                    </div>
+                  </div>
+                )}
               </tbody>
             </table>
           </div>
