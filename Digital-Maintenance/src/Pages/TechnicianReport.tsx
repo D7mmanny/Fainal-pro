@@ -1,5 +1,4 @@
 import axios from "axios";
-import AllReport from "../Components/AllReport";
 import user from "../assets/user.svg";
 import Nav from "../Components/Nav";
 import { useState, useEffect } from "react";
