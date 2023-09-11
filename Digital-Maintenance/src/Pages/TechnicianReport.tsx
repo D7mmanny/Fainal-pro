@@ -111,12 +111,12 @@ function TechnicianReport() {
                       <td className="px-4 py-3 text-xs border">
                         <div className="flex justify-center items-center">
                           {task.OperationStatus == "Complete" && (
-                            <h4 className="bg-green-100 text-green-600 rounded-full p-2 w-3/6 text-center">
+                            <h4 className="bg-green-100 text-green-600 rounded-full p-2 lg:w-3/6 w-5/6 text-center">
                               Complete
                             </h4>
                           )}
                           {task.OperationStatus != "Complete" && (
-                            <h4 className="bg-red-100 text-red-600 rounded-full p-2 w-3/6 text-center">
+                            <h4 className="bg-red-100 text-red-600 rounded-full p-2 lg:w-3/6 w-5/6 text-center">
                               InComplete
                             </h4>
                           )}
@@ -153,7 +153,7 @@ function TechnicianReport() {
                   );
                 })}
                 {modal && (
-                  <div className="modal">
+                  <div className="modal mt-20 lg:mt-4">
                     <div onClick={toggleModal} className="overlay"></div>
                     <div className="modal-content flex justify-center items-center">
                       <TechReportComponant />

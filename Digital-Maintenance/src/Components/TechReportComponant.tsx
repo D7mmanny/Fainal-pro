@@ -78,7 +78,7 @@ function TechReportComponant() {
                 <div className="flex flex-col justify-center items-center">
                   <h1 className=" font-semibold">Reports:</h1>
                   <div className=" w-3/4 border mt-7 reportBorder border-black">
-                    <p className="text-xs text-center mt-5 px-2">{task.report}</p>
+                    <p className="text-xs text-center mt-5 px-2 md:text-sm">{task.report}</p>
                   </div>
                 </div>
               </div>
