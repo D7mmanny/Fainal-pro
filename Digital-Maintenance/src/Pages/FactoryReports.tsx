@@ -152,7 +152,7 @@ function FactoryReports() {
                   <div className="modal">
                     <div onClick={toggleModal} className="overlay"></div>
                     <div className="modal-content flex justify-center items-center">
-                      <SuperReportComponent />
+                      <SuperReportComponent/>
                       <button className="close-modal" onClick={toggleModal}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
