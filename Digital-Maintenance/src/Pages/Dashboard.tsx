@@ -24,9 +24,7 @@ function Dashboard() {
         <nav className="bg-dark-blue flex justify-between">
           <div className="flex gap-5 justify-center items-center">
             <img className="w-14 py-3 ml-5" src={WhiteLogo} />
-            <a className=" cursor-pointer">
-              <img className="w-10 py-3 ml-5" src={Direct} />
-            </a>
+            <a href="/FactoryReports" className=" cursor-pointer"><img className="w-10 py-3 ml-5" src={Direct} /></a>
           </div>
           <div className="flex justify-center items-center text-white gap-4">
             <svg
@@ -51,9 +49,7 @@ function Dashboard() {
         <nav className="bg-light-blue flex justify-between">
           <div className="flex gap-5 justify-center items-center">
             <img className="w-14 py-3 ml-5" src={WhiteLogo2} />
-            <a className=" cursor-pointer">
-              <img className="w-10 py-3 ml-5" src={Direct} />
-            </a>
+            <a href="/TechnicianReport" className=" cursor-pointer"><img className="w-10 py-3 ml-5" src={Direct} /></a>
           </div>
           <div className="flex justify-center items-center text-white gap-4">
             <svg
@@ -115,7 +111,7 @@ function Dashboard() {
           <a onClick={logOut} className=" hover:bg-cyan-950 cursor-pointer text-center"><h1 className="text-lg  text-white lg:py-4 py-10 lg:px-20 mx-1 lg:mt-0 mt-52"> Log out</h1></a>
           
         </div>
-        <div className="w-full flex justify-center lg:items-center md:items-start md:mt-14">
+        <div className="w-full flex justify-center lg:items-center md:items-start mt-14 lg:mt-0">
 
           {active == "Info" && <Info/>}
         </div>

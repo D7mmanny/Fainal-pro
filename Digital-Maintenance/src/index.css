@@ -137,16 +137,14 @@
     right: 11%;    
 }
 
- /* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1280px){
     .Info{
         height: 70vh;
         width: 70vh;
     }
-}
 
-/* Tablet */
-@media (min-width: 768px) {
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
     .Info{
         height: 50vh;
         width: 40vh;

@@ -44,7 +44,7 @@ function TechnicianReport() {
       </div>
       <section className="container mx-auto p-6 font-mono">
         <div className="w-full flex justify-between items-center py-5">
-          <h1 className="pl-3 text-2xl ">Factory Reports</h1>
+          <h1 className="pl-3 text-2xl ">Labs Reports</h1>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
