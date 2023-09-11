@@ -60,7 +60,7 @@ function TechnicianInspection() {
 
             <div className="w-full flex gap-1">
             <div className=" w-1/2 text-center flex flex-col items-end ">
-            <h4 className=" w-10/12">Current maintenance history</h4>
+            <h4 className=" w-10/12">Current maintenance date</h4>
             <input
                 name="dayDate"
                 type="date"
