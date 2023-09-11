@@ -28,9 +28,30 @@ function TechReportComponant() {
 
           return (
             <>
-              <h1>{task.Lab}</h1>
-              <h1>{task.Technician}</h1>
-              <p>{task.report}</p>
+              <div className=" bg-white ReportComponent flex flex-col items-center gap-7 shadow-lg rounded-sm">
+                <h1 className="text-xl mt-8 font-semibold underline">
+                  {task.Lab}
+                </h1>
+                <div>
+                  <hr className="border border-black w-full border-1" />
+                  <div className="text-sm flex gap-9 mt-2 mb-2">
+                    <h1 className="ml-1">Technican name: {task.Technician}</h1>
+                    
+                  </div>
+                  <div className="text-sm flex gap-9 mt-2 mb-2">
+                  <h1 className="ml-1">Operation type: {task.OperationType}</h1> 
+                    <h1 >Status: {task.OperationStatus}</h1>
+                    </div>
+                  <hr className="border border-black w-full border-1" />
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                    <h1 className=" font-semibold">Reports:</h1>
+                    <div className=" w-3/4 border mt-7 reportBorder border-black">
+                        <p className="text-xs text-center mt-5">{task.report}</p>
+                    
+                    </div>
+                </div>
+              </div>
             </>
           );
         }

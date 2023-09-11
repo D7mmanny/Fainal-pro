@@ -126,9 +126,9 @@ function TechnicianReport() {
                       <td className="px-4 py-3 text-sm border w-1/4 h-1/4">
                         <a
                           className="flex items-center justify-between hover:text-light-blue cursor-pointer"
-                          onClick={()=>{
+                          onClick={() => {
                             setModal(!modal);
-                            localStorage.setItem("taskId",task.id)
+                            localStorage.setItem("taskId", task.id);
                           }}
                         >
                           {" "}
@@ -155,10 +155,23 @@ function TechnicianReport() {
                 {modal && (
                   <div className="modal">
                     <div onClick={toggleModal} className="overlay"></div>
-                    <div className="modal-content ">
-                      <TechReportComponant/>
-                      <button className="close-modal" onClick={toggleModal}>
-                        CLOSE
+                    <div className="modal-content flex justify-center items-center">
+                      <TechReportComponant />
+                      <button className="close-modal mt-3 mr-7" onClick={toggleModal}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          className="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
                       </button>
                     </div>
                   </div>

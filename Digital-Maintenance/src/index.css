@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.ReportComponent{
+    height: 70vh;
+    width: 60vh;
+}
+.reportBorder{
+    height: 33vh;
+}
 .Tasks{
     height: 75vh;
 }
