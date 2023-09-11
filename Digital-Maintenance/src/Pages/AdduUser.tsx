@@ -88,7 +88,11 @@ function AdduUser() {
   <option value="">Factory</option>
     <option value="Riyadh">Riyadh</option>
     <option value="Jeddah">Jeddah</option>
-    <option value="Dammam">Dammam</option>
+    <option value="Najran">Najran</option>
+    <option value="Alkhubar">Al-Khubar</option>
+    <option value="North">The-North</option>
+    <option value="Tabuk">Tabuk</option>
+
     
   </select>
 

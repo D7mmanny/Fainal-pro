@@ -75,7 +75,7 @@ function TechnicianMaintuinance() {
         <div className="flex w-full text-center gap-2">
 
           <div className="flex flex-col  justify-between w-1/2 items-end">
-            <h4 className="w-10/12">Current maintenance history</h4>
+            <h4 className="w-10/12">Current maintenance date</h4>
             <input
               name="dayDate"
               type="date"
