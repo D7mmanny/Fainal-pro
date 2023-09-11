@@ -8,6 +8,7 @@ function Info() {
   return (
     <div>
         <div className='Info bg-myGray rounded-xl lg:w-96 border flex flex-col items-center'>
+
             <img className=' drop-shadow-xl py-5' src={user}/>
             <h1 className='text-xl py-3'>Personal Information</h1>
             <div className='h-72 w-96 border border-gray-400 border-spacing-1 rounded-xl flex flex-col'>

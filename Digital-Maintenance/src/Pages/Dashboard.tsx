@@ -101,10 +101,11 @@ function Dashboard() {
 
       {/* content */}
       <div className="flex">
-        <div className="w-1/4 flex flex-col items-center bg-dark-blue h-screen gap-80">
-          <div className="flex flex-col items-center">
+        <div className="w-2/6 lg:w-1/4 flex flex-col items-center bg-dark-blue h-screen gap-80">
+          <div className="flex flex-col items-center w-full ">
           <img className="pt-12" src={User} />
           <h1 className="text-xl text-white mt-5"> {name}</h1>
+
           <hr className="border border-gray-400 lg:w-full w-48 mt-8 border-spacing-0.5" />
           <a  onClick={() => {
                   setActive("Info");
@@ -115,6 +116,7 @@ function Dashboard() {
           
         </div>
         <div className="w-full flex justify-center lg:items-center md:items-start md:mt-14">
+
           {active == "Info" && <Info/>}
         </div>
         

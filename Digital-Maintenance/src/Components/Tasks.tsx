@@ -40,9 +40,9 @@ function Tasks() {
   return (
 
    <div className="flex justify-center w-screen mb-5">
-     <div className="flex w-10/12 bg-myGray rounded-3xl h-full ">
-      <div className="w-2/3">
-        <div className="Tasks flex flex-col gap-1 drop-shadow-sm px-4 rounded-xl overflow-auto">
+     <div className="flex flex-col h-5/6 lg:flex-row w-10/12 bg-myGray rounded-3xl lg:h-full p-3 ">
+      <div className="h-2/6 lg:w-2/3  ">
+        <div className=" Tasks flex flex-col gap-1 drop-shadow-sm px-4 rounded-xl overflow-auto ">
           {taskApi.map((task) => {
             if (task.Technician == name) {
               return (
@@ -79,7 +79,7 @@ function Tasks() {
           })}
         </div>
       </div>
-      <div className=" w-full h-full flex justify-center">
+      <div className=" w-full h-4/6 lg:h-full flex justify-center p-3 lg:p-0">
         {taskDetails == "Inspection" && <TechnicianInspection />}
         {taskDetails == "Maintanance" && <TechnicianMaintuinance />}
         {taskDetails == "Null" && <Null/>}
