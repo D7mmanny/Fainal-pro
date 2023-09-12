@@ -11,7 +11,7 @@ function OperationType() {
   const [error, setErorr] = React.useState("");
 
   //sendInspection
-  const sendInspection = (e) => {
+  const sendInspection = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
     const data = {
       Technician: localStorage.getItem("technicianName"),
@@ -53,7 +53,7 @@ function OperationType() {
   };
 
   //sendMaintanance
-  const sendMaintanance = (e) => {
+  const sendMaintanance = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
     const data = {
       Technician: localStorage.getItem("technicianName"),

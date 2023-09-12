@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState } from "react";
+import React from "react";
 
 
 function AdduUser() {
@@ -14,12 +15,12 @@ function AdduUser() {
     });
    
     
-    const handleInput = (e) => {
+    const handleInput = (e:React.ChangeEvent<HTMLSelectElement> |React.ChangeEvent<HTMLInputElement>) => {
       e.persist();
       setUser({ ...user, [e.target.name]: e.target.value });
     };
   
-    const saveUser =(e) =>{ 
+    const saveUser =(e:React.MouseEvent<HTMLButtonElement, MouseEvent>) =>{ 
       e.preventDefault();
       const data ={
           username: user.username,

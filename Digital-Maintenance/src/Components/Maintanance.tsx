@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import React from "react";
 // import React from "react";
 
 
@@ -9,7 +9,7 @@ function Maintanance() {
     MaintenanceType:""
   })
   
-    const handleInput = (e) => {
+    const handleInput = (e :React.ChangeEvent<HTMLSelectElement>) => {
       e.persist();
       setMaintanance({ ...Maintanance, [e.target.name]: e.target.value });
     };

@@ -1,4 +1,4 @@
-import React from "react";
+
 import User from "../assets/user.svg";
 
 interface TechnicianName {
