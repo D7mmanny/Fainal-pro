@@ -11,7 +11,6 @@ function TechnicianMaintuinance() {
   const taskTital = localStorage.getItem("taskLab");
   const MaintenanceType = localStorage.getItem("MaintenanceType");
   const Equipment = localStorage.getItem("Equipment");
-  const [erorr, setErorr] = useState("");
   const [report, setReport] = useState({
     report: "",
     dayDate: "",
@@ -28,7 +27,16 @@ function TechnicianMaintuinance() {
 
   const submitReport = () => {
     if (report.report == "" || report.dayDate == "" || report.NextDate == "") {
-      setErorr("empty");
+      toast.info('Please fill the empty field', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     } else {
       axios.put(`https://64f8e3b3824680fd21802caf.mockapi.io/Task/${taskid}`, {
         report: report.report,
@@ -54,7 +62,6 @@ function TechnicianMaintuinance() {
     }
   };
 
-  console.log(erorr);
 
   return (
     <div className="w-full xl:w-9/12 h-full  p-5  ">

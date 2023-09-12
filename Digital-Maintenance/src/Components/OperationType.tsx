@@ -28,7 +28,16 @@ function OperationType() {
       Factory: localStorage.getItem("Factory"),
     };
     if (data.Technician == "" || data.Lab == "") {
-      setErorr("There is something empty");
+      toast.info('Please fill the empty field', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     } else {
       axios
         .post(`https://64f8e3b3824680fd21802caf.mockapi.io/Task`, data)
@@ -75,7 +84,16 @@ function OperationType() {
       data.Equipment == "" ||
       data.MaintenanceType == ""
     ) {
-      setErorr("There is something empty");
+      toast.info('Please fill the empty field', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     } else {
       axios
         .post(`https://64f8e3b3824680fd21802caf.mockapi.io/Task`, data)

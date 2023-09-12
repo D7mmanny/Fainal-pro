@@ -14,7 +14,8 @@ function Shutdown() {
 
   //post report
   const submitReport = () => {
-    axios
+    if(report != ''){
+      axios
       .post("https://64f8e5cc824680fd21802e48.mockapi.io/FactoryReport", {
         supervisorName: name,
         type: "Shutdown",
@@ -36,6 +37,19 @@ function Shutdown() {
           theme: "light",
         });
       });
+    }else{
+      toast.info('Please fill the empty field', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    }
+   
   };
   return (
     <div className="w-7/12 ">

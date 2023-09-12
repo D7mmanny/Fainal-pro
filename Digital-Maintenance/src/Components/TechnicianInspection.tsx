@@ -8,7 +8,6 @@ import React from "react";
 function TechnicianInspection() {
     const taskid = localStorage.getItem("taskId")
     const taskTital= localStorage.getItem("taskLab")
-    const[erorr,setErorr]=useState("")
     const [report,setReport]=useState({
         report:"",
         dayDate:"",
@@ -25,7 +24,16 @@ function TechnicianInspection() {
 
     const submitReport = () => {
         if(report.report == "" ||report.dayDate =="" ||report.NextDate==""){
-            setErorr("empty")
+            toast.info('Please fill the empty field', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
         }else{
             axios.put(`https://64f8e3b3824680fd21802caf.mockapi.io/Task/${taskid}`,{
                 report:report.report,
@@ -51,7 +59,6 @@ function TechnicianInspection() {
 
     }
 
-        console.log(erorr);
         
     return (
         <div className="w-full xl:w-9/12 h-full  p-5 ">
