@@ -14,7 +14,7 @@ import SupervisorReport from '../Pages/SupervisorReport'
 import TechReportsDetails from '../Pages/TechReportsDetails'
 import CityFactoryReports from './CityFactoryReports'
 
-function Linkes() {
+function BrowserRouter() {
   return (
     <div>
     <Routes>
@@ -35,4 +35,4 @@ function Linkes() {
   )
 }
 
-export default Linkes
+export default BrowserRouter
