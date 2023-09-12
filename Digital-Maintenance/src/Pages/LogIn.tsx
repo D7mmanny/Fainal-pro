@@ -3,6 +3,8 @@ import LogInImg from '../assets/logInImg.svg'
 import Logo from '../assets/Logo.svg'
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function LogIn() {
     const nav = useNavigate()
@@ -47,9 +49,21 @@ function LogIn() {
                     {item.type == "Technician" && nav("/HomeTech")}
                     {item.type == "manager" && (nav("/HomeManager"))}
                 }
+                else{
+                    setError("the id are not correct")    
+                }
             })
         } else {
-            setError("incorrect input")
+            toast.info('Fill the empty field', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });   
         }
     }
   return (
@@ -71,14 +85,14 @@ function LogIn() {
                 onClick={checkId}>
                     Log in
                 </button>
-                {error}
+                <p className=' text-xl font-semibold'>{error}</p>
             </div>
             <div className='w-3/5'> 
                 <img src={LogInImg}/>
             </div>
         </div>
         </div>
-        
+        <ToastContainer />    
     </div>
   )
 }
