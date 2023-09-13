@@ -238,33 +238,27 @@
     }
     .jeddah{
         position: absolute;
-        top:69%;
-        left: 39%;  
+        transform: matrix(1,0,0,1,-90,0);  
     }
     .Najran{
         position: absolute;
-        top:82%;
-        left: 50%;     
+        transform: matrix(1,0,0,1,0,120);     
     }
     .Riyadh{
         position: absolute;
-        top:60%;
-        left: 50%;        
+        transform: matrix(1,0,0,1,0,70);       
     }
     .alkhubar{
         position: absolute;
-        top:65%;
-        left: 61%;     
+        transform: matrix(1,0,0,1,-20,-50);    
     }
     .north {
         position: absolute;
-        top:33%;
-        left: 43%;       
+        transform: matrix(1,0,0,1,-110,-50);      
     }
     .Tabuk{
         position: absolute;
-        top:37%;
-        left: 28%;     
+        transform: matrix(1,0,0,1,-50,50);     
     }
     .done{
         position: absolute;
@@ -350,7 +344,7 @@
     .jeddah{
         width: 3vh;
         position: absolute;
-        transform: matrix(1,0,0,1,-10,-100); 
+        transform: matrix(1,0,0,1,-40,-140); 
     }
     .Najran{
         width: 3vh;
@@ -370,7 +364,7 @@
     .north {
         width: 3vh;
         position: absolute;
-        transform: matrix(1,0,0,1,0,170);       
+        transform: matrix(1,0,0,1,-50,130);       
     }
     .Tabuk{
         width: 3vh;
