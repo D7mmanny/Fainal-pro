@@ -16,7 +16,6 @@ const [Lab,setLab]=useState({
     
   };
   localStorage.setItem("Lab",Lab.lab)
-  
   return (
     <div>
         

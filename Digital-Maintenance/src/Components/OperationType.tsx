@@ -10,8 +10,16 @@ function OperationType() {
   const [active, setActive] = React.useState("");
   const [error, setErorr] = React.useState("");
 
+  const date = new Date();
+  const currentDay = String(date.getDate()).padStart(2, "0");
+  const currentMonth = String(date.getMonth() + 1).padStart(2, "0");
+  const currentYear = date.getFullYear();
+  const currentDate = `${currentDay}-${currentMonth}-${currentYear}`;
+
   //sendInspection
-  const sendInspection = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const sendInspection = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
     const data = {
       Technician: localStorage.getItem("technicianName"),
@@ -26,9 +34,10 @@ function OperationType() {
       OperationStatus: "",
       supervisor: localStorage.getItem("username"),
       Factory: localStorage.getItem("Factory"),
+      date: currentDate,
     };
     if (data.Technician == "" || data.Lab == "") {
-      toast.info('Please fill the empty field', {
+      toast.info("Please fill the empty field", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -37,7 +46,7 @@ function OperationType() {
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
+      });
     } else {
       axios
         .post(`https://64f8e3b3824680fd21802caf.mockapi.io/Task`, data)
@@ -62,7 +71,9 @@ function OperationType() {
   };
 
   //sendMaintanance
-  const sendMaintanance = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const sendMaintanance = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
     const data = {
       Technician: localStorage.getItem("technicianName"),
@@ -77,6 +88,7 @@ function OperationType() {
       OperationStatus: "",
       supervisor: localStorage.getItem("username"),
       Factory: localStorage.getItem("Factory"),
+      Date: currentDate,
     };
     if (
       data.Technician == "" ||
@@ -84,7 +96,7 @@ function OperationType() {
       data.Equipment == "" ||
       data.MaintenanceType == ""
     ) {
-      toast.info('Please fill the empty field', {
+      toast.info("Please fill the empty field", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -93,14 +105,14 @@ function OperationType() {
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
+      });
     } else {
       axios
         .post(`https://64f8e3b3824680fd21802caf.mockapi.io/Task`, data)
         .then((res) => {
           console.log(res);
-           //alert
-           toast.success("The task has been sent successfully", {
+          //alert
+          toast.success("The task has been sent successfully", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -109,8 +121,7 @@ function OperationType() {
             draggable: true,
             progress: undefined,
             theme: "light",
-          })
-
+          });
         });
 
       setErorr("");

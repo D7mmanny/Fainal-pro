@@ -15,7 +15,9 @@ function Tasks() {
     Lab: string;
     Technician: string;
     OperationStatus: string;
+    date: string;
   };
+
 
   //localsrorage
   const name = localStorage.getItem("username");
@@ -72,6 +74,7 @@ function Tasks() {
                     Factory={task.Factory}
                     Lab={task.Lab}
                     OperationStatus={task.OperationStatus}
+                    date={task.date}
                   />
                 </a>
               );

@@ -19,6 +19,7 @@ function TechnicianMaintuinance() {
     OperationStatus: "",
   });
 
+
   const handleInput = (e:React.ChangeEvent<HTMLTextAreaElement> |React.ChangeEvent<HTMLInputElement> ) => {
     e.persist();
     setReport({ ...report, [e.target.name]: e.target.value });
