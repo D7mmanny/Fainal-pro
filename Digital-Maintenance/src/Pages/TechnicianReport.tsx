@@ -153,7 +153,7 @@ function TechnicianReport() {
                       </td>
                     </tr>
                   );
-                })}
+                }).reverse()}
                 {modal && (
                   <div className="modal mt-20 lg:mt-4">
                     <div onClick={toggleModal} className="overlay"></div>
