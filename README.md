@@ -4,8 +4,11 @@ What's Smart-Maintanance ?
 It is a website that works to digitize the "turnaround & inspection" process in factories, which consists of three parties:
 
 -Factories manager
+
 -Factory supervisor
+
 -Factory technicians
+
 
 to facilitate and increase the efficiency of laboratory inspection and equipment maintenance by reducing operational costs and human errors.
 
