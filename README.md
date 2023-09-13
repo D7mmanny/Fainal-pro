@@ -9,3 +9,4 @@
 صفحات تصميم الموقع بإستخدام Figma tool :
 
 رابط الموقع:
+https://64ff8e13ecfe8362b4586c1d--magnificent-beijinho-b015b6.netlify.app/
