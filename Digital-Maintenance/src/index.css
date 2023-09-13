@@ -277,7 +277,9 @@
         height: 40vh;
         width: 40vh;
     }
-
+    .Tasks{
+        height: 20vh;
+    }
     .map1{
         position: absolute;
         width: 17vh;

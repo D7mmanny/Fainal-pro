@@ -77,14 +77,16 @@ function LogIn() {
                 <input
                 type='text'
                 placeholder='user Id'
-                className=' lg:py-1 lg:px-20 md:px-1 md:py-1 sm:py-1 sm:px-1 max-sm:py-0.5 max-sm:px-0.5 rounded-xl border text-center'
+                className=' lg:py-1 lg:px-20 md:px-1 md:py-1 sm:py-1 sm:px-1 max-sm:py-0.5 max-sm:px-0.5 rounded-xl  border-4 text-center'
                 onChange={(e)=>setUserInput(e.target.value)}
                 />
+                <div className='w-full flex justify-center'>
                 <button
-                className=' bg-light-blue max-sm:mb-3 max-sm:py-0.5 max-sm:text-sm max-sm:px-1 lg:py-1 lg:px-10 md:py-0.5 md:px-4 sm:py-0.5 sm:px-4 rounded-xl text-white hover:bg-dark-blue'
+                className='lg:w-3/12 lg:h-10  bg-light-blue  max-sm:text-sm  rounded-xl text-white hover:bg-dark-blue'
                 onClick={checkId}>
                     Log in
                 </button>
+                </div>
                 <p className=' text-xl font-semibold'>{error}</p>
             </div>
             <div className='w-3/5'> 

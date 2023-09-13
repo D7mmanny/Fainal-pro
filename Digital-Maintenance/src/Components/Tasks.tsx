@@ -40,9 +40,9 @@ function Tasks() {
   return (
 
    <div className="flex justify-center w-screen mb-5">
-     <div className="flex flex-col h-5/6 lg:flex-row w-10/12 bg-myGray rounded-3xl lg:h-full p-3 ">
-      <div className="h-2/6 lg:w-2/3  ">
-        <div className=" Tasks flex flex-col gap-1 drop-shadow-sm px-4 rounded-xl overflow-auto ">
+     <div className="flex flex-col h-6/6 lg:flex-row w-10/12 bg-myGray rounded-3xl lg:h-full p-3 ">
+      <div className=" lg:w-2/3  ">
+        <div className=" Tasks flex flex-col gap-1 drop-shadow-sm px-4 rounded-xl overflow-auto  ">
           {taskApi.map((task) => {
             if (task.Technician == name) {
               return (
