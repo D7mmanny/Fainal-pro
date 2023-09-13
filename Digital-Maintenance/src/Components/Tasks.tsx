@@ -79,7 +79,7 @@ function Tasks() {
                 </a>
               );
             }
-          })}
+          }).reverse()}
         </div>
       </div>
       <div className=" w-full h-5/6 lg:h-full flex justify-center p-3 lg:p-0">
