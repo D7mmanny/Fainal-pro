@@ -88,7 +88,7 @@ function OperationType() {
       OperationStatus: "",
       supervisor: localStorage.getItem("username"),
       Factory: localStorage.getItem("Factory"),
-      Date: currentDate,
+      date: currentDate,
     };
     if (
       data.Technician == "" ||
