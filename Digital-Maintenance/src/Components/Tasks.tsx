@@ -79,7 +79,7 @@ function Tasks() {
           })}
         </div>
       </div>
-      <div className=" w-full h-4/6 lg:h-full flex justify-center p-3 lg:p-0">
+      <div className=" w-full h-5/6 lg:h-full flex justify-center p-3 lg:p-0">
         {taskDetails == "Inspection" && <TechnicianInspection />}
         {taskDetails == "Maintanance" && <TechnicianMaintuinance />}
         {taskDetails == "Null" && <Null/>}
