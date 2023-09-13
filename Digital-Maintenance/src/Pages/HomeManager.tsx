@@ -40,55 +40,55 @@ function HomeManager() {
         {/*Saudi Map*/}
         <div>
           <img
-            className="map1 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer "
+            className="map1 transition ease-in-out delay-150 hover:-translate-y hover: cursor-pointer "
             src={one}
           />
           <img
-            className=" map2  transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer"
+            className=" map2  transition ease-in-out delay-150 hover:-translate-y hover: cursor-pointer"
             src={two}
           />
           <img
-            className=" map3 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer"
+            className=" map3 transition ease-in-out delay-150 hover:-translate-y hover: cursor-pointer"
             src={three}
           />
           <img
-            className=" map4 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer"
+            className=" map4 transition ease-in-out delay-150 hover:-translate-y hover: cursor-pointer"
             src={four}
           />
           <img
-            className=" map5 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer"
+            className=" map5 transition ease-in-out delay-150 hover:-translate-y hover: cursor-pointer"
             src={five}
           />
           <img
-            className=" map6 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer"
+            className=" map6 transition ease-in-out delay-150 hover:-translate-y hover: cursor-pointer"
             src={six}
           />
           <img
-            className=" map7 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer"
+            className=" map7 transition ease-in-out delay-150 hover:-translate-y hover: cursor-pointer"
             src={seven}
           />
           <img
-            className=" map8 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer"
+            className=" map8 transition ease-in-out delay-150 hover:-translate-y hover: cursor-pointer"
             src={eight}
           />
           <img
-            className=" map9 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer"
+            className=" map9 transition ease-in-out delay-150 hover:-translate-y hover: cursor-pointer"
             src={nine}
           />
           <img
-            className=" map10 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer"
+            className=" map10 transition ease-in-out delay-150 hover:-translate-y hover: cursor-pointer"
             src={ten}
           />
           <img
-            className=" map11  transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer"
+            className=" map11  transition ease-in-out delay-150 hover:-translate-y hover: cursor-pointer"
             src={Eleven}
           />
           <img
-            className="map12 pl-2 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer"
+            className="map12 pl-2 transition ease-in-out delay-150 hover:-translate-y hover: cursor-pointer"
             src={Twelve}
           />
           <img
-            className="map13 pl-2 transition ease-in-out delay-150 hover:-translate-y hover:scale-105 cursor-pointer"
+            className="map13 pl-2 transition ease-in-out delay-150 hover:-translate-y hover: cursor-pointer"
             src={thirteen}
           />
 
