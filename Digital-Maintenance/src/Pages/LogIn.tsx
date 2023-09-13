@@ -82,7 +82,7 @@ function LogIn() {
                 />
                 <div className='w-full flex justify-center'>
                 <button
-                className='w-5/12 lg:w-3/12 lg:h-10  bg-light-blue  max-sm:text-sm  rounded-xl text-white hover:bg-dark-blue'
+                className='w-5/12 lg:w-3/12 lg:h-10  bg-light-blue text-sm lg:text-xl  max-sm:text-sm  rounded-xl text-white hover:bg-dark-blue'
                 onClick={checkId}>
                     Log in
                 </button>
