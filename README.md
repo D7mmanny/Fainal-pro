@@ -15,14 +15,14 @@ to facilitate and increase the efficiency of laboratory inspection and equipment
 
 
 
-# <h1> tooles</h1> [![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
+
 Website design pages using Figma tool :
 
 ![image](https://github.com/D7mmanny/Smart-Maintanance/assets/107875162/859aa6cb-40b4-46d3-b808-3f812d640c73)
 
 Website URL: https://smart-maintanance.netlify.app/
 
-
+# <h1> tooles</h1> [![My Skills](https://skillicons.dev/icons?i=ts,html,css,wasm,react,tailwind)](https://skillicons.dev)
 
 Website programmer:
 
