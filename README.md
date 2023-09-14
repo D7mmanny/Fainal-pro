@@ -22,7 +22,7 @@ Website design pages using Figma tool :
 
 Website URL: https://smart-maintanance.netlify.app/
 
-# <h1> tooles</h1> [![My Skills](https://skillicons.dev/icons?i=ts,html,css,react,tailwind)](https://skillicons.dev)
+# <h1> tooles</h1> [![My Skills](https://skillicons.dev/icons?i=ts,react,tailwind,netlify,github)](https://skillicons.dev)
 
 Website programmer:
 
